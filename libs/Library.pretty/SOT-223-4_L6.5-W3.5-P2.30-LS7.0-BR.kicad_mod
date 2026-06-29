@@ -1,0 +1,223 @@
+(footprint "SOT-223-4_L6.5-W3.5-P2.30-LS7.0-BR"
+	(version 20241229)
+	(generator "easyeda2kicad-ts")
+	(layer "F.Cu")
+	(attr smd)
+	(property "Reference" "REF**"
+		(at 0 -6.3 0)
+		(layer "F.SilkS")
+		(uuid "f5c4ebb6-e27f-428c-a860-acd38e3e30ab")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "SOT-223-4_L6.5-W3.5-P2.30-LS7.0-BR"
+		(at 0 6.3 0)
+		(layer "F.Fab")
+		(uuid "6d3ccf61-c794-4789-81a7-9a2cf90ae3a5")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f7bead6f-715a-4713-8d65-3443680d3407")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "8a380194-9c03-47a8-afed-740ac1f9cfd2")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LCSC Part" "C347222"
+		(at 0 8.3 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e26270ce-ac0c-424a-acb7-93b18c854cb3")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Part Name" "AMS1117-3.3_C347222"
+		(at 0 10.3 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "7851b4b6-b225-41f8-ba83-29e19680b8b4")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer" "UMW(友台半导体)"
+		(at 0 12.3 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a2af518e-7102-4c4a-8d61-ab815d56eeff")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_text user "%R"
+		(at 0 0)
+		(layer "F.Fab")
+		(uuid "2cda29ea-3260-495a-9c9c-ae25761ded3f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_line
+		(start -1.37 3.33)
+		(end -1.37 -3.33)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "fc2fdd81-ecff-49e1-8393-59a6cbc1a320")
+	)
+	(fp_line
+		(start -1.37 -3.33)
+		(end 1.37 -3.33)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "f842284d-e168-40cb-ba06-8f2d0b61b7b1")
+	)
+	(fp_line
+		(start 1.37 -3.33)
+		(end 1.37 3.33)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "f1ffa871-0ed4-454c-9384-947b3831bbe7")
+	)
+	(fp_line
+		(start 1.37 3.33)
+		(end -1.37 3.33)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "31a9ac48-cd9d-4567-b123-eeb1b9a8455c")
+	)
+	(fp_line
+		(start -4.35 -3.7)
+		(end 4.35 -3.7)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "2650d806-a1fb-499b-b831-dcfc73cefaf8")
+	)
+	(fp_line
+		(start 4.35 -3.7)
+		(end 4.35 3.7)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "531349e0-9cca-42dc-8f90-a046ec320098")
+	)
+	(fp_line
+		(start 4.35 3.7)
+		(end -4.35 3.7)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "d43e4660-9a25-405b-b342-1654546c1eb2")
+	)
+	(fp_line
+		(start -4.35 -3.7)
+		(end -4.35 3.7)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "3aaad9ba-ed4e-44a6-93c4-d218dcf4d988")
+	)
+	(pad "1" smd rect
+		(at 2.83 2.3 0)
+		(size 2.47 0.98)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "92d45b28-ca12-41c5-bb40-a1510aab164a")
+	)
+	(pad "2" smd rect
+		(at 2.83 0 0)
+		(size 2.47 0.98)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "dca1c767-95be-4419-ae83-c955a102a034")
+	)
+	(pad "3" smd rect
+		(at 2.83 -2.3 0)
+		(size 2.47 0.98)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "a08e2ef7-3531-4d34-85ac-91d42d844d24")
+	)
+	(pad "4" smd rect
+		(at -2.83 0 0)
+		(size 2.47 3.6)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "b0e9e29d-a5d3-48fd-98c0-9d31f00b8b6c")
+	)
+	(fp_circle
+		(center 3.5 3.25)
+		(end 3.53 3.25)
+		(stroke
+			(width 0.06)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "32ae5037-99b8-4d93-b431-529f206773d6")
+	)
+	(fp_circle
+		(center 3.56 2.41)
+		(end 3.81 2.41)
+		(stroke
+			(width 0.5)
+			(type solid)
+		)
+		(layer "Cmts.User")
+		(uuid "0d895429-1b3c-44aa-99aa-56e686958cbd")
+	)
+)

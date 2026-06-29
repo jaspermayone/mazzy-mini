@@ -1,0 +1,166 @@
+(footprint "FL_002"
+	(version 20241229)
+	(generator "easyeda2kicad-ts")
+	(layer "F.Cu")
+	(attr smd)
+	(property "Reference" "REF**"
+		(at 0 -4 0)
+		(layer "F.SilkS")
+		(uuid "199d75f8-a858-4878-9cc3-306aaf7f2116")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "FL_002"
+		(at 0 4 0)
+		(layer "F.Fab")
+		(uuid "b9056642-e28a-4bce-9cfe-9bf9768dc9cb")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "33ab3c54-8697-4472-bac5-4bdadd3d7c42")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a6653e73-ae2f-47bc-a54c-ae494c15d242")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LCSC Part" "C2927483"
+		(at 0 6 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "3afccec3-76b3-4819-9102-9bfd4c3c8414")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Part Name" "DB2EK-2.54-2P-GN-S"
+		(at 0 8 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "09ffc58c-3d0d-4625-8116-e8f9bdd12382")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer" "DORABO(地博电气)"
+		(at 0 10 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c5780575-1163-4b28-a1d6-83827db84223")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_text user "%R"
+		(at 0 0)
+		(layer "F.Fab")
+		(uuid "3033dc6d-a4da-40ac-aafd-cabb584964c2")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_line
+		(start -1.05 -1.05)
+		(end 1.05 -1.05)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "d51fcdb4-06fd-4961-a4da-b3acbb5c162f")
+	)
+	(fp_line
+		(start 1.05 -1.05)
+		(end 1.05 1.05)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "7d6c0e3b-4ba7-4a5f-8f13-e5b76cf8a2e4")
+	)
+	(fp_line
+		(start 1.05 1.05)
+		(end -1.05 1.05)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "881c1572-8608-4187-b924-27b79fbedd77")
+	)
+	(fp_line
+		(start -1.05 -1.05)
+		(end -1.05 1.05)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "84d98dad-fd66-4e34-a922-b7632a8f23fd")
+	)
+	(pad "1" thru_hole circle
+		(at 0 0 0)
+		(size 1.52 1.52)
+		(layers "*.Cu" "*.Mask")
+		(drill 0.9144)
+		(uuid "adb50966-65d1-42f1-b950-9ee27a86ef7c")
+	)
+	(fp_circle
+		(center 0.5 -0.5)
+		(end 0.53 -0.5)
+		(stroke
+			(width 0.06)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "b32722e7-d3a0-4d01-8cc6-49ae6e6716c3")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 0.15 0)
+		(stroke
+			(width 0.3)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "43652555-ecfd-478f-9b8f-8f66d65eac2f")
+	)
+)
