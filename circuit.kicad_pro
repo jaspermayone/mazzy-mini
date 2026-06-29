@@ -254,7 +254,7 @@
       "internal_id": "",
       "mfg": "",
       "mpn": "",
-      "sch_revision": ""
+      "sch_revision": "1"
     },
     "layer_pairs": [],
     "layer_presets": [],
@@ -676,17 +676,17 @@
     "top_level_sheets": [
       {
         "filename": "circuit.kicad_sch",
-        "name": "circuit",
+        "name": "mazzy-mini",
         "uuid": "bd6174ae-c3ca-4473-b1e1-10eb8f19a183"
       }
     ],
-    "used_designators": "C6,#PWR5-6,#PWR14,#PWR17-18,#PWR22,#PWR24-26,#PWR28-32,#PWR34-39,#PWR41-42,#PWR49",
+    "used_designators": "",
     "variants": []
   },
   "sheets": [
     [
       "bd6174ae-c3ca-4473-b1e1-10eb8f19a183",
-      "circuit"
+      "mazzy-mini"
     ]
   ],
   "text_variables": {},
