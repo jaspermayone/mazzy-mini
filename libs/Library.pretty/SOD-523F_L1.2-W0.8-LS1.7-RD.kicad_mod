@@ -1,0 +1,237 @@
+(footprint "SOD-523F_L1.2-W0.8-LS1.7-RD"
+	(version 20241229)
+	(generator "easyeda2kicad-ts")
+	(layer "F.Cu")
+	(attr smd)
+	(property "Reference" "REF**"
+		(at 0 -4.01 0)
+		(layer "F.SilkS")
+		(uuid "0262c183-93a5-4fbd-a39e-161a262f7f10")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "SOD-523F_L1.2-W0.8-LS1.7-RD"
+		(at 0 4.01 0)
+		(layer "F.Fab")
+		(uuid "32853baa-3a36-40e4-868d-dfa6d0ad49bb")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ecf39bd8-af28-40c5-8dd0-acf8065a43af")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "cda4e942-5ff1-4079-ad3b-bd3327c2a506")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LCSC Part" "C502546"
+		(at 0 6.01 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "83ed3f53-3859-4fe9-88a8-91ac4b11635f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Part Name" "ESD5Z5V0_C502546"
+		(at 0 8.01 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "3d53162c-85c3-411c-9da1-18fbc1b6109a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer" "MDD(辰达半导体)"
+		(at 0 10.01 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "13ef87da-27b1-4f3e-9923-761fcc3accf7")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_text user "%R"
+		(at 0 0)
+		(layer "F.Fab")
+		(uuid "8f8316ba-9042-435e-a01b-375aff538c50")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_line
+		(start 0.66 0.33)
+		(end 0.66 0.44)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "8acccb08-ffae-4845-a6dc-46223ae72bc8")
+	)
+	(fp_line
+		(start 0.66 0.44)
+		(end -0.66 0.44)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "8a53777b-0f9d-4fcb-ae60-b1f44ec4ba0a")
+	)
+	(fp_line
+		(start -0.66 0.44)
+		(end -0.66 0.44)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "7a05eff2-1224-4169-a0f0-8e5dfb197c65")
+	)
+	(fp_line
+		(start -0.66 -0.43)
+		(end -0.66 -0.43)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "67305c88-7b7a-4dcb-a107-e194cd3d76c8")
+	)
+	(fp_line
+		(start -0.66 -0.43)
+		(end 0.66 -0.43)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "3c5482fe-20df-434d-8a83-150b2b0b5985")
+	)
+	(fp_line
+		(start 0.66 -0.43)
+		(end 0.66 -0.33)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "6cd33625-259d-4db3-89a1-0d3f4214913e")
+	)
+	(fp_line
+		(start -1.15 -0.75)
+		(end 1 -0.75)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "5ec8e7dd-adc2-41c8-82d3-0451e51ee354")
+	)
+	(fp_line
+		(start 1 -0.75)
+		(end 1 0.75)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "c104ab60-ee61-4bfc-96a5-8ae7bab2fdca")
+	)
+	(fp_line
+		(start 1 0.75)
+		(end -1.15 0.75)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "ee15671e-99d2-480e-ace6-f33a57636648")
+	)
+	(fp_line
+		(start -1.15 -0.75)
+		(end -1.15 0.75)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "26a45258-7650-49bd-ab0e-2f5dc99af904")
+	)
+	(pad "1" smd custom
+		(at -0.71 -0.01 0)
+		(size 0.005 0.005)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(primitives
+			(gr_poly
+				(pts
+					(xy -0.31 -0.23) (xy 0.3 -0.23) (xy 0.3 0.25) (xy -0.31 0.25)
+				)
+				(width 0.1)
+			)
+		)
+		(uuid "d06561f8-eabd-4515-bb3e-d801c1348047")
+	)
+	(pad "2" smd custom
+		(at 0.71 0.01 0)
+		(size 0.005 0.005)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(primitives
+			(gr_poly
+				(pts
+					(xy -0.3 -0.24) (xy 0.31 -0.24) (xy 0.31 0.24) (xy -0.3 0.24)
+				)
+				(width 0.1)
+			)
+		)
+		(uuid "79c394fc-4398-407d-83cd-fda63a5c112f")
+	)
+	(fp_circle
+		(center -0.8 -0.4)
+		(end -0.77 -0.4)
+		(stroke
+			(width 0.06)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "f2d8db9b-883c-4dcb-b2ff-a4adf1cb5f84")
+	)
+)

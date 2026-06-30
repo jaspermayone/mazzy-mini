@@ -6,13 +6,14 @@ A small KiCad PCB for probing and mapping the factory wiring harness of a Mazda 
 
 The board plugs into the factory harness via Metra 70-7903 pigtail (24-pin + 16-pin connectors) and provides:
 
-- **40 through-hole test/solder pads** (TP1–TP24 for the 24-pin side, TP25–TP40 for the 16-pin side) — one pad per pigtail wire, labeled with known wire color/function or UNKNOWN for unidentified signals.
+- **40 through-hole solder/probe pads** (TP1–TP24 for the 24-pin side, TP25–TP40 for the 16-pin side) — one pad per Metra pigtail wire, labeled with known wire color/function or UNKNOWN for unidentified signals. These pads are intended to be soldered to the pigtail wires, not mated as removable connectors.
 - **SN65HVD230 CAN transceiver** on 3.3V, wired to CAN_TX/CAN_RX for a Raspberry Pi Pico 2 W (GP4/GP5) to sniff and identify the Mazda MS-CAN bus by jumper-probing the unknown pads.
 - **Onboard 3.3V LDO** (AMS1117-3.3) fed from a user-selectable BAT12 (constant) or ACC12 (switched) source via JP1 solder jumper.
-- **P-channel MOSFET reverse-polarity protection** (PMV100EPAR, Q1) and TVS clamp (SMBJ18A, D2) on the 12V input before the regulator.
+- **P-channel MOSFET reverse-polarity protection** (PMV100EPAR, Q1) with a 15V gate-source zener clamp, plus a unidirectional SMBJ15A TVS clamp on the 12V input before the regulator.
 - **Optional CAN termination** (120Ω R4 behind JP2) — leave open on the already-terminated Mazda factory MS-CAN bus.
 - **3.3V power LED** (D1) for quick confirmation that JP1 and the 12V input path are live.
-- **USB-C power input** (5V_USB) for bench use without the vehicle.
+- **USB-C 5V input rail** (5V_USB) exposed to the Pico header for bench Pico power. It does **not** currently feed the AMS1117/onboard 3V3 rail.
+- **Pico 3V3 isolation jumper** (JP3) keeps Pico-facing 3.3V header pins isolated from onboard 3V3 by default to avoid regulator backfeed/fighting.
 
 ## Known wires (24-pin side)
 
@@ -51,3 +52,11 @@ Solder jumper JP1 selects whether the onboard 3.3V regulator is fed from BAT12 (
 ## JP2 — CAN termination
 
 Leave **open** when connected to the Mazda factory MS-CAN bus — it is already terminated at both ends. Only bridge JP2 if you are running a standalone bench test with no other termination present.
+
+## JP3 — Pico 3V3 isolation
+
+Leave **open** by default. J2/J3/J4 3.3V pins are on `PICO_3V3`, isolated from the onboard AMS1117 `3V3` rail unless JP3 is bridged. This prevents the Pico regulator and onboard regulator from backfeeding each other. Bridge JP3 only when you intentionally want one selected 3.3V source to power both sides.
+
+## USB-C power limitation
+
+`5V_USB` is routed to the Pico-facing header and its probe pad only. It does not diode-OR into the AMS1117 input, so USB-C alone will not power U1/the onboard CAN transceiver unless a future power-OR stage is added.

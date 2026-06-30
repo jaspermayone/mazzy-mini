@@ -1,0 +1,211 @@
+(footprint "SMB_L4.6-W3.6-LS5.3-RD"
+	(version 20241229)
+	(generator "easyeda2kicad-ts")
+	(layer "F.Cu")
+	(attr smd)
+	(property "Reference" "REF**"
+		(at 0 -4 0)
+		(layer "F.SilkS")
+		(uuid "2e5a1497-fcd2-42f7-82b4-ea3cc037ec85")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "SMB_L4.6-W3.6-LS5.3-RD"
+		(at 0 4 0)
+		(layer "F.Fab")
+		(uuid "c5ee8dce-155d-4a26-a02d-4f93245050c9")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "34061ff3-434c-4b52-8f1e-b2f89c80ca4f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "5e2d959e-896c-4fca-b3ca-77a95245f8d1")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LCSC Part" "C83846"
+		(at 0 6 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "afe88a85-5e17-4c63-b613-e717f04efe85")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Part Name" "SMBJ15A_C83846"
+		(at 0 8 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "5ab1f198-68c6-427a-8dd2-363b1af41021")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer" "Littelfuse(美国力特)"
+		(at 0 10 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "3b8e14b0-ef80-4bc8-9bf4-0d06702798dc")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_text user "%R"
+		(at 0 0)
+		(layer "F.Fab")
+		(uuid "120c17bb-734c-447b-92f3-30c2d82e44d9")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_line
+		(start -1.02 -1.89)
+		(end -1.02 1.89)
+		(stroke
+			(width 0.151994)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "81998fc6-d752-4035-af99-9a22723e3f6c")
+	)
+	(fp_line
+		(start -2.74 -1.89)
+		(end 2.74 -1.89)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "cec24e7a-6c81-4ba7-b57b-04a1fdd50496")
+	)
+	(fp_line
+		(start -2.74 1.89)
+		(end 2.74 1.89)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "0340dd82-9327-4b48-b7d3-b8ab95212025")
+	)
+	(fp_line
+		(start 2.74 -1.89)
+		(end 2.74 -1.3)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "0c9558e3-3741-48bf-a54f-43773e353299")
+	)
+	(fp_line
+		(start 2.74 1.89)
+		(end 2.74 1.3)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "81f5f70b-4336-42e9-b83e-bfd5378f7c80")
+	)
+	(fp_line
+		(start -3.65 -2.25)
+		(end 3.65 -2.25)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "b1073db8-e889-43f8-a4f8-3607b2178349")
+	)
+	(fp_line
+		(start 3.65 -2.25)
+		(end 3.65 2.25)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "c6c04045-02ad-445f-bb48-62b6a1dc3ae3")
+	)
+	(fp_line
+		(start 3.65 2.25)
+		(end -3.65 2.25)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "8868c60a-f5ee-4190-b7a7-071906b14a29")
+	)
+	(fp_line
+		(start -3.65 -2.25)
+		(end -3.65 2.25)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "fe2860db-6fcc-4803-b80b-d5ce06ec1c0a")
+	)
+	(pad "2" smd rect
+		(at 2.36 0 0)
+		(size 2.05 2.19)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "3bc122d6-914f-4fe1-a3e8-81160e4211a5")
+	)
+	(pad "1" smd rect
+		(at -2.36 0 0)
+		(size 2.05 2.19)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "bbad29a5-3ead-4336-8e9f-90623026d522")
+	)
+	(fp_circle
+		(center -2.65 1.8)
+		(end -2.62 1.8)
+		(stroke
+			(width 0.06)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "049f2772-543c-47fe-81ca-11da9a64cb8c")
+	)
+)

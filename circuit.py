@@ -4,7 +4,13 @@ from skidl import *
 @requirement("Metra 70-7903 pigtail approach: TP1-TP24 are the 24-pin-side solder/probe pads and TP25-TP40 are the 16-pin-side solder/probe pads.")
 @requirement("Every factory-harness pigtail wire must land on one through-hole solder/test pad, TP1 through TP40, with the known function or UNKNOWN in the value label.")
 @requirement("U1 SN65HVD230 CAN transceiver must run from 3.3V, expose CAN_TX/CAN_RX for Raspberry Pi Pico 2 W GP4/GP5, and keep CAN termination disabled by default.")
+@requirement("U1", "SN65HVD230 pin 2 GND must connect to GND and pin 3 VCC must connect to 3V3; these pins must not be swapped.")
 @requirement("Onboard 3.3V must be generated from selectable BAT12 or ACC12 through reverse-polarity P-channel MOSFET protection before the AMS1117-3.3 regulator.")
+@requirement("D2", "12V rail transient clamp must be a unidirectional SMBJ15A-class 15V TVS with cathode to VIN12 and anode to GND.")
+@requirement("D3", "Q1 gate-source voltage must be clamped by a 15V zener from source/cathode to gate/anode, with R1 less than 1kΩ to sink zener current during source transients.")
+@requirement("JP3", "Pico-facing 3.3V header pins must be isolated from the onboard 3V3 rail by a normally-open jumper to prevent regulator backfeed by default.")
+@requirement("D4", "USB-C VBUS must have local 5V ESD protection to GND at the connector side of the EMI bead.")
+@requirement("FB1", "USB-C VBUS must pass through a ferrite bead before becoming the board 5V_USB rail.")
 def build_circuit():
     gnd = Ground("GND")
     bat12 = Power("BAT12", voltage_domain=12.0)
@@ -15,15 +21,16 @@ def build_circuit():
     vin_raw = Net("VIN_RAW")
     vin12 = Net("VIN12")
     v3v3 = Power("3V3", voltage_domain=3.3, current=1.0)
+    vbus = Power("VBUS", voltage_domain=5.0)
     v5usb = Power("5V_USB", voltage_domain=5.0)
 
     can_tx = Net("CAN_TX", voltage_domain=3.3)
     can_rx = Net("CAN_RX", voltage_domain=3.3)
     canh = Net("CANH")
     canl = Net("CANL")
-    term_sw = Net("TERM_SW")
     rp_gate = Net("RP_GATE")
     led_a = Net("PWR_LED_A")
+    pico_3v3 = Net("PICO_3V3", voltage_domain=3.3)
     cc1 = Net("CC1")
     cc2 = Net("CC2")
     can_rs = Net("CAN_RS")
@@ -119,7 +126,7 @@ def build_circuit():
         footprint="Library:SOT-23-3_L2.9-W1.3-P1.90-LS2.3-BR",
     )
     q1.fields["LCSC"] = "C3290636"
-    q1.fields["info"] = "PMV100EPAR P-channel MOSFET: pin 1 G, pin 2 S, pin 3 D; -60V VDS and +/-20V VGS from datasheet. Drain=input, source=protected load for high-side reverse-polarity protection."
+    q1.fields["info"] = "PMV100EPAR P-channel MOSFET: pin 1 G, pin 2 S, pin 3 D; -60V VDS and +/-20V VGS from datasheet. Drain=input, source=protected load for high-side reverse-polarity protection. D3 clamps VGS during positive input transients."
     design_intent(
         q1,
         "High-side P-channel MOSFET reverse-polarity protection for the selected 12V source before the LDO and CAN circuitry.",
@@ -130,24 +137,42 @@ def build_circuit():
     vin12 += q1[2]
     rp_gate += q1[1]
 
-    r1 = Part("Device", "R_Small", value="100kΩ", ref="R1", footprint="Resistor_SMD:R_0603_1608Metric")
+    r1 = Part("Device", "R_Small", value="820Ω", ref="R1", footprint="Resistor_SMD:R_0603_1608Metric")
     r1.fields["LCSC"] = "NONE"
-    r1.fields["info"] = "100kΩ gate-to-ground resistor for Q1 reverse-polarity P-channel MOSFET."
+    r1.fields["info"] = "820Ω gate-to-ground resistor for Q1 reverse-polarity P-channel MOSFET. Low value sinks D3 zener current so Q1 VGS remains below the +/-20V absolute maximum during source transients."
     design_intent(
         r1,
-        "Gate-to-ground bias for Q1; turns the P-channel reverse-protection MOSFET on only when the selected 12V source has normal polarity.",
+        "Gate-to-ground bias and D3 zener-current sink for Q1; turns the P-channel reverse-protection MOSFET on only when the selected 12V source has normal polarity.",
         group="12V input selection and protection",
         placement="Place adjacent to Q1 gate.",
     )
     rp_gate += r1[1]
     gnd += r1[2]
 
-    d2 = Part("Device", "D_TVS_Small", value="SMBJ18A", ref="D2", footprint="Diode_SMD:D_SMB")
-    d2.fields["LCSC"] = "C353379"
-    d2.fields["info"] = "SMBJ18A: 18V VRWM, 29.2V clamp, SMB TVS. This is transient suppression, not full ISO automotive load-dump qualification for AMS1117."
+    d3 = Part(
+        "Library",
+        "MMSZ5245BT1G",
+        value="15V",
+        ref="D3",
+        footprint="Library:SOD-123_L2.7-W1.6-LS3.7-RD",
+    )
+    d3.fields["LCSC"] = "C129730"
+    d3.fields["info"] = "onsemi MMSZ5245BT1G 15V 500mW zener, SOD-123. Pin 1 cathode to Q1 source/VIN12, pin 2 anode to Q1 gate/RP_GATE; clamps PMOS VGS around -15V and below the +/-20V rating."
+    design_intent(
+        d3,
+        "Gate-source zener clamp for Q1 so positive VIN12/source spikes cannot overdrive the PMOS gate oxide.",
+        group="12V input selection and protection",
+        placement="Place directly between Q1 source pin 2 and gate pin 1 with very short traces.",
+    )
+    vin12 += d3[1]
+    rp_gate += d3[2]
+
+    d2 = Part("Library", "SMBJ15A_C83846", value="SMBJ15A", ref="D2", footprint="Library:SMB_L4.6-W3.6-LS5.3-RD")
+    d2.fields["LCSC"] = "C83846"
+    d2.fields["info"] = "Littelfuse SMBJ15A unidirectional TVS: pin 1 cathode/banded side to VIN12, pin 2 anode to GND; 15V VRWM, 16.7V min breakdown, 24.4V clamp at 24.6A. This is transient suppression, not full ISO automotive load-dump qualification for AMS1117."
     design_intent(
         d2,
-        "Transient clamp across the protected 12V rail to reduce harness spikes during bench and in-vehicle probing.",
+        "Unidirectional 15V TVS clamp across the protected 12V rail to shunt positive harness spikes without clamping normal positive polarity.",
         group="12V input selection and protection",
         placement="Place close to VIN12 entry and give the GND side a short low-impedance return.",
     )
@@ -189,7 +214,7 @@ def build_circuit():
 
     c2 = Part(
         "Device",
-        "C_Polarized_Small",
+        "C_Small",
         value="22uF 10V Tant",
         ref="C2",
         footprint="Capacitor_Tantalum_SMD:CP_EIA-3528-21_Kemet-B_HandSolder",
@@ -226,7 +251,7 @@ def build_circuit():
         group="Power indication",
         placement="Place next to D1 and label PWR.",
     )
-    d1 = Part("Device", "LED_Small", value="GREEN", ref="D1", footprint="LED_SMD:LED_0603_1608Metric")
+    d1 = Part("Library", "LED_Small", value="GREEN", ref="D1", footprint="LED_SMD:LED_0603_1608Metric")
     d1.fields["LCSC"] = "C20433785"
     d1.fields["info"] = "Vishay TLMG1100-GS15 green 0603 LED, 2.4V Vf and 20mA rated forward current from product evidence."
     design_intent(
@@ -303,32 +328,34 @@ def build_circuit():
 
     r4 = Part("Device", "R_Small", value="120Ω", ref="R4", footprint="Resistor_SMD:R_0805_2012Metric")
     r4.fields["LCSC"] = "NONE"
-    r4.fields["info"] = "120Ω CAN termination resistor in series with normally-open JP2; do not enable on the already-terminated Mazda factory MS-CAN bus."
+    r4.fields["info"] = "Optional 120Ω CAN termination footprint directly across CANH/CANL. DNP by default; do not populate on the already-terminated Mazda factory MS-CAN bus."
+    r4.dnp = True
     design_intent(
         r4,
-        "Optional CAN termination resistor; only active when JP2 is solder-bridged. Leave open for Mazda factory MS-CAN bus because the bus is already terminated.",
+        "DNP optional CAN termination resistor across CANH/CANL. Populate only for standalone bench/end-node testing, not for the factory bus.",
         group="CAN transceiver and probe headers",
-        placement="Place adjacent to JP2 and the CANH/CANL terminal.",
-    )
-    jp2 = Part(
-        "Jumper",
-        "SolderJumper_2_Open",
-        value="TERM OPEN",
-        ref="JP2",
-        footprint="Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm",
-    )
-    jp2.fields["LCSC"] = "NONE"
-    jp2.fields["info"] = "Normally-open solder jumper that enables R4 120Ω CAN termination only when intentionally bridged for bench/end-node testing."
-    design_intent(
-        jp2,
-        "Open solder jumper in series with R4 so the 120Ω CAN termination is disabled by default.",
-        group="CAN transceiver and probe headers",
-        placement="Place beside R4 with silk label DO NOT BRIDGE ON FACTORY BUS.",
+        placement="Place directly between the CANH/CANL pair near U1/J1 with very short, symmetric stubs; no series jumper in the CAN pair.",
     )
     canh += r4[1]
-    term_sw += r4[2]
-    term_sw += jp2[1]
-    canl += jp2[2]
+    canl += r4[2]
+
+    jp3 = Part(
+        "Jumper",
+        "SolderJumper_2_Open",
+        value="PICO 3V3 ISO",
+        ref="JP3",
+        footprint="Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm",
+    )
+    jp3.fields["LCSC"] = "NONE"
+    jp3.fields["info"] = "Normally-open solder jumper between onboard 3V3 and Pico-facing PICO_3V3 header pins. Leave open by default to avoid backfeeding/fighting the Pico 3.3V regulator; bridge only when one 3.3V source is intentionally selected."
+    design_intent(
+        jp3,
+        "Optional bridge from onboard 3V3 to Pico-facing 3.3V header pins; open by default for backfeed protection.",
+        group="Pico power and logic headers",
+        placement="Place beside J2/J3/J4 3V3 pins and silk label OPEN=NO BACKFEED.",
+    )
+    v3v3 += jp3[1]
+    pico_3v3 += jp3[2]
 
     j1 = Part(
         "Library",
@@ -348,61 +375,61 @@ def build_circuit():
     canl += j1[2]
 
     j2 = Part(
-        "Connector_Generic",
-        "Conn_01x03",
+        "Library",
+        "705430002",
         value="CTX 3V3 GND TX",
         ref="J2",
-        footprint="Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical",
+        footprint="Library:CONN-TH_705430002",
     )
     j2.fields["LCSC"] = "C504828"
-    j2.fields["info"] = "3-pin 2.54mm CTX header carrying 3.3V, GND, and CAN_TX for Pico GP4 transmit wiring."
+    j2.fields["info"] = "3-pin 2.54mm CTX header carrying isolated PICO_3V3, GND, and CAN_TX for Pico GP4 transmit wiring. PICO_3V3 is not tied to onboard 3V3 unless JP3 is bridged."
     design_intent(
         j2,
-        "3-pin CTX header: 3.3V, GND, and CAN_TX for a Pico 2 W GP4 transmit jumper.",
+        "3-pin CTX header: isolated PICO_3V3, GND, and CAN_TX for a Pico 2 W GP4 transmit jumper.",
         group="CAN transceiver and probe headers",
-        placement="Place next to J3/J4 and silk label pins VCC, GND, TX.",
+        placement="Place next to J3/J4 and silk label pins P3V3, GND, TX.",
     )
-    v3v3 += j2[1]
+    pico_3v3 += j2[1]
     gnd += j2[2]
     can_tx += j2[3]
 
     j3 = Part(
-        "Connector_Generic",
-        "Conn_01x03",
+        "Library",
+        "705430002",
         value="CRX 3V3 GND RX",
         ref="J3",
-        footprint="Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical",
+        footprint="Library:CONN-TH_705430002",
     )
     j3.fields["LCSC"] = "C504828"
-    j3.fields["info"] = "3-pin 2.54mm CRX header carrying 3.3V, GND, and CAN_RX for Pico GP5 receive wiring."
+    j3.fields["info"] = "3-pin 2.54mm CRX header carrying isolated PICO_3V3, GND, and CAN_RX for Pico GP5 receive wiring. PICO_3V3 is not tied to onboard 3V3 unless JP3 is bridged."
     design_intent(
         j3,
-        "3-pin CRX header: 3.3V, GND, and CAN_RX for a Pico 2 W GP5 receive jumper.",
+        "3-pin CRX header: isolated PICO_3V3, GND, and CAN_RX for a Pico 2 W GP5 receive jumper.",
         group="CAN transceiver and probe headers",
-        placement="Place next to J2/J4 and silk label pins VCC, GND, RX.",
+        placement="Place next to J2/J4 and silk label pins P3V3, GND, RX.",
     )
-    v3v3 += j3[1]
+    pico_3v3 += j3[1]
     gnd += j3[2]
     can_rx += j3[3]
 
     j4 = Part(
-        "Connector_Generic",
-        "Conn_02x05_Odd_Even",
+        "Library",
+        "10897101",
         value="PICO GP4/GP5 CAN",
         ref="J4",
-        footprint="Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical",
+        footprint="Library:HDR-TH_10P-P2.54-V-M-R2-C5-S2.54",
     )
     j4.fields["LCSC"] = "C586266"
-    j4.fields["info"] = "10-pin 2.54mm Pico utility header exposing GP4/CAN_TX, GP5/CAN_RX, 3.3V, GND, and USB 5V."
+    j4.fields["info"] = "10-pin 2.54mm Pico utility header exposing GP4/CAN_TX, GP5/CAN_RX, isolated PICO_3V3, GND, and USB 5V. PICO_3V3 is not tied to onboard 3V3 unless JP3 is bridged."
     design_intent(
         j4,
-        "10-pin Pico utility header exposing CAN_TX for GP4, CAN_RX for GP5, 3.3V, GND, and USB 5V for direct Pico 2 W jumper access.",
+        "10-pin Pico utility header exposing CAN_TX for GP4, CAN_RX for GP5, isolated PICO_3V3, GND, and USB 5V for direct Pico 2 W jumper access.",
         group="Pico power and logic headers",
-        placement="Place near board edge with silk: 1 GP4/TX, 2 GP5/RX, 3 3V3, 4 GND, 5 5V_USB, 6 GND.",
+        placement="Place near board edge with silk: 1 GP4/TX, 2 GP5/RX, 3 P3V3, 4 GND, 5 5V_USB, 6 GND.",
     )
     can_tx += j4[1]
     can_rx += j4[2]
-    v3v3 += j4[3]
+    pico_3v3 += j4[3]
     gnd += j4[4]
     v5usb += j4[5]
     gnd += j4[6]
@@ -418,20 +445,56 @@ def build_circuit():
         footprint="Library:TYPE-C-SMD_TYPE-C-6P_USB4125-GF-A-0190",
     )
     j5.fields["LCSC"] = "C3197922"
-    j5.fields["info"] = "Molex 2171750001 USB-C power-only receptacle providing an optional 5V_USB rail for Pico power."
+    j5.fields["info"] = "Molex 2171750001 USB-C power-only receptacle providing raw VBUS for optional Pico bench power. VBUS is ESD-protected by D4 and EMI-filtered by FB1 before becoming 5V_USB."
     design_intent(
         j5,
-        "USB-C power-only input for optional 5V_USB rail to power a Pico from an external USB supply; data pins are not present on this 6-pin power connector.",
+        "USB-C power-only input for optional Pico bench power; data pins are not present on this 6-pin power connector.",
         group="Pico power and logic headers",
-        placement="Place on board edge; keep VBUS trace to J4/TP42 short and label as USB 5V only.",
+        placement="Place on board edge; put D4 at the connector VBUS/GND pins and FB1 immediately after D4 before the 5V_USB fanout.",
     )
-    v5usb += j5.p["A9"]
-    v5usb += j5.p["B9"]
+    vbus += j5.p["A9"]
+    vbus += j5.p["B9"]
     gnd += j5.p["A12"]
     gnd += j5.p["B12"]
     cc1 += j5.p["A5"]
     cc2 += j5.p["B5"]
     gnd += j5[7]
+
+    d4 = Part(
+        "Device",
+        "D_TVS",
+        value="PESD5V0V1BB",
+        ref="D4",
+        footprint="Library:SOD-523_L1.2-W0.8-LS1.6-RD",
+    )
+    d4.fields["LCSC"] = "C477993"
+    d4.fields["info"] = "Nexperia PESD5V0V1BB,115 single-line bidirectional 5V ESD diode, SC-79/SOD-523; 5V VRWM, 5.8V breakdown, 12.5V clamp at 4.8A 8/20us. Place from raw USB-C VBUS to GND at J5."
+    design_intent(
+        d4,
+        "Local ESD clamp for USB-C VBUS before the ferrite bead; protects the bench-power input from cable/contact discharge.",
+        group="Pico power and logic headers",
+        placement="Place immediately adjacent to J5 VBUS and GND pins, before FB1, with a short ground return.",
+    )
+    vbus += d4[1]
+    gnd += d4[2]
+
+    fb1 = Part(
+        "Library",
+        "R_Small",
+        value="600Ω@100MHz 1A",
+        ref="FB1",
+        footprint="Resistor_SMD:R_0603_1608Metric",
+    )
+    fb1.fields["LCSC"] = "C404396"
+    fb1.fields["info"] = "TDK KPZ1608SHR601ATD25 ferrite bead: 600Ω at 100MHz, 1A current rating, 150mΩ DCR, 0603. Series EMI bead from raw USB-C VBUS to filtered 5V_USB rail. Pico/USB load current budget is not yet specified."
+    design_intent(
+        fb1,
+        "Series ferrite bead forming the USB-C VBUS EMI filter with C6 on the filtered 5V_USB side.",
+        group="Pico power and logic headers",
+        placement="Place directly after J5/D4 on VBUS; route J5 VBUS -> D4/FB1 -> C6/5V_USB as a short power path.",
+    )
+    vbus += fb1[1]
+    v5usb += fb1[2]
 
     r5 = Part("Device", "R_Small", value="5.1kΩ", ref="R5", footprint="Resistor_SMD:R_0603_1608Metric")
     r5.fields["LCSC"] = "NONE"
