@@ -88,8 +88,8 @@ def build_circuit():
             ref="TP" + str(pad_num),
             footprint="TestPoint:TestPoint_THTPad_D2.5mm_Drill1.2mm",
         )
-        pad.fields["LCSC"] = "NONE"
-        pad.fields["info"] = pad_intent
+        pad.lcsc = "NONE"
+        pad.info = pad_intent
         design_intent(
             pad,
             pad_intent,
@@ -106,8 +106,8 @@ def build_circuit():
         ref="JP1",
         footprint="Jumper:SolderJumper-3_P2.0mm_Open_TrianglePad1.0x1.5mm",
     )
-    jp1.fields["LCSC"] = "NONE"
-    jp1.fields["info"] = "Open 3-pad solder jumper used to select BAT12 or ACC12 as the source for the onboard 3.3V regulator; leave open while mapping unknown harness pins."
+    jp1.lcsc = "NONE"
+    jp1.info = "Open 3-pad solder jumper used to select BAT12 or ACC12 as the source for the onboard 3.3V regulator; leave open while mapping unknown harness pins."
     design_intent(
         jp1,
         "Selects whether the onboard 3.3V regulator is fed from BAT12 constant power or ACC12 switched power; no bridge by default for safe harness mapping.",
@@ -125,8 +125,8 @@ def build_circuit():
         ref="Q1",
         footprint="Library:SOT-23-3_L2.9-W1.3-P1.90-LS2.3-BR",
     )
-    q1.fields["LCSC"] = "C3290636"
-    q1.fields["info"] = "PMV100EPAR P-channel MOSFET: pin 1 G, pin 2 S, pin 3 D; -60V VDS and +/-20V VGS from datasheet. Drain=input, source=protected load for high-side reverse-polarity protection. D3 clamps VGS during positive input transients."
+    q1.lcsc = "C3290636"
+    q1.info = "PMV100EPAR P-channel MOSFET: pin 1 G, pin 2 S, pin 3 D; -60V VDS and +/-20V VGS from datasheet. Drain=input, source=protected load for high-side reverse-polarity protection. D3 clamps VGS during positive input transients."
     design_intent(
         q1,
         "High-side P-channel MOSFET reverse-polarity protection for the selected 12V source before the LDO and CAN circuitry.",
@@ -138,8 +138,8 @@ def build_circuit():
     rp_gate += q1[1]
 
     r1 = Part("Device", "R_Small", value="820Ω", ref="R1", footprint="Resistor_SMD:R_0603_1608Metric")
-    r1.fields["LCSC"] = "NONE"
-    r1.fields["info"] = "820Ω gate-to-ground resistor for Q1 reverse-polarity P-channel MOSFET. Low value sinks D3 zener current so Q1 VGS remains below the +/-20V absolute maximum during source transients."
+    r1.lcsc = "NONE"
+    r1.info = "820Ω gate-to-ground resistor for Q1 reverse-polarity P-channel MOSFET. Low value sinks D3 zener current so Q1 VGS remains below the +/-20V absolute maximum during source transients."
     design_intent(
         r1,
         "Gate-to-ground bias and D3 zener-current sink for Q1; turns the P-channel reverse-protection MOSFET on only when the selected 12V source has normal polarity.",
@@ -156,8 +156,8 @@ def build_circuit():
         ref="D3",
         footprint="Library:SOD-123_L2.7-W1.6-LS3.7-RD",
     )
-    d3.fields["LCSC"] = "C129730"
-    d3.fields["info"] = "onsemi MMSZ5245BT1G 15V 500mW zener, SOD-123. Pin 1 cathode to Q1 source/VIN12, pin 2 anode to Q1 gate/RP_GATE; clamps PMOS VGS around -15V and below the +/-20V rating."
+    d3.lcsc = "C129730"
+    d3.info = "onsemi MMSZ5245BT1G 15V 500mW zener, SOD-123. Pin 1 cathode to Q1 source/VIN12, pin 2 anode to Q1 gate/RP_GATE; clamps PMOS VGS around -15V and below the +/-20V rating."
     design_intent(
         d3,
         "Gate-source zener clamp for Q1 so positive VIN12/source spikes cannot overdrive the PMOS gate oxide.",
@@ -168,8 +168,8 @@ def build_circuit():
     rp_gate += d3[2]
 
     d2 = Part("Library", "SMBJ15A_C83846", value="SMBJ15A", ref="D2", footprint="Library:SMB_L4.6-W3.6-LS5.3-RD")
-    d2.fields["LCSC"] = "C83846"
-    d2.fields["info"] = "Littelfuse SMBJ15A unidirectional TVS: pin 1 cathode/banded side to VIN12, pin 2 anode to GND; 15V VRWM, 16.7V min breakdown, 24.4V clamp at 24.6A. This is transient suppression, not full ISO automotive load-dump qualification for AMS1117."
+    d2.lcsc = "C83846"
+    d2.info = "Littelfuse SMBJ15A unidirectional TVS: pin 1 cathode/banded side to VIN12, pin 2 anode to GND; 15V VRWM, 16.7V min breakdown, 24.4V clamp at 24.6A. This is transient suppression, not full ISO automotive load-dump qualification for AMS1117."
     design_intent(
         d2,
         "Unidirectional 15V TVS clamp across the protected 12V rail to shunt positive harness spikes without clamping normal positive polarity.",
@@ -185,8 +185,8 @@ def build_circuit():
         ref="U2",
         footprint="Library:SOT-223-4_L6.5-W3.5-P2.30-LS7.0-BR",
     )
-    u2.fields["LCSC"] = "C347222"
-    u2.fields["info"] = "AMS1117-3.3 fixed LDO: pin1 GND, pin2 VOUT, pin3 VIN, tab/pin4 VOUT; 1A IC rating but thermally limited from 12V. Intended for CAN transceiver/probe logic, not for powering a Pico W radio continuously."
+    u2.lcsc = "C347222"
+    u2.info = "AMS1117-3.3 fixed LDO: pin1 GND, pin2 VOUT, pin3 VIN, tab/pin4 VOUT; 1A IC rating but thermally limited from 12V. Intended for CAN transceiver/probe logic, not for powering a Pico W radio continuously."
     design_intent(
         u2,
         "Local 3.3V regulator for the SN65HVD230 CAN transceiver and low-current probe headers.",
@@ -201,8 +201,8 @@ def build_circuit():
     u2[2].set_current_source(1.0)
 
     c1 = Part("Device", "C_Small", value="10uF 25V", ref="C1", footprint="Capacitor_SMD:C_1206_3216Metric")
-    c1.fields["LCSC"] = "NONE"
-    c1.fields["info"] = "10uF 25V input capacitor for AMS1117-3.3 VIN; voltage rating selected for nominal 12V automotive rail margin."
+    c1.lcsc = "NONE"
+    c1.info = "10uF 25V input capacitor for AMS1117-3.3 VIN; voltage rating selected for nominal 12V automotive rail margin."
     design_intent(
         c1,
         "AMS1117 input capacitor; 25V rating gives margin over nominal automotive 12V/14.4V charging voltage.",
@@ -219,8 +219,8 @@ def build_circuit():
         ref="C2",
         footprint="Capacitor_Tantalum_SMD:CP_EIA-3528-21_Kemet-B_HandSolder",
     )
-    c2.fields["LCSC"] = "NONE"
-    c2.fields["info"] = "AMS1117 output capacitor: datasheet guidance calls for tantalum or ESR in the stable range; use 10V or higher rating on 3.3V rail."
+    c2.lcsc = "NONE"
+    c2.info = "AMS1117 output capacitor: datasheet guidance calls for tantalum or ESR in the stable range; use 10V or higher rating on 3.3V rail."
     design_intent(
         c2,
         "AMS1117 stable output capacitor using tantalum/ESR style required by AMS1117-family regulators.",
@@ -231,8 +231,8 @@ def build_circuit():
     gnd += c2[2]
 
     c3 = Part("Device", "C_Small", value="100nF 10V", ref="C3", footprint="Capacitor_SMD:C_0603_1608Metric")
-    c3.fields["LCSC"] = "NONE"
-    c3.fields["info"] = "100nF 10V high-frequency bypass capacitor on the 3.3V regulator output."
+    c3.lcsc = "NONE"
+    c3.info = "100nF 10V high-frequency bypass capacitor on the 3.3V regulator output."
     design_intent(
         c3,
         "High-frequency bypass for the 3.3V rail at the LDO output.",
@@ -243,8 +243,8 @@ def build_circuit():
     gnd += c3[2]
 
     r2 = Part("Device", "R_Small", value="2.2kΩ", ref="R2", footprint="Resistor_SMD:R_0603_1608Metric")
-    r2.fields["LCSC"] = "NONE"
-    r2.fields["info"] = "2.2kΩ current-limiting resistor for low-current 3.3V power LED indicator."
+    r2.lcsc = "NONE"
+    r2.info = "2.2kΩ current-limiting resistor for low-current 3.3V power LED indicator."
     design_intent(
         r2,
         "Power LED current limiter; approximately 0.4mA with the selected 0603 green LED at 3.3V.",
@@ -252,8 +252,8 @@ def build_circuit():
         placement="Place next to D1 and label PWR.",
     )
     d1 = Part("Library", "LED_Small", value="GREEN", ref="D1", footprint="LED_SMD:LED_0603_1608Metric")
-    d1.fields["LCSC"] = "C20433785"
-    d1.fields["info"] = "Vishay TLMG1100-GS15 green 0603 LED, 2.4V Vf and 20mA rated forward current from product evidence."
+    d1.lcsc = "C20433785"
+    d1.info = "Vishay TLMG1100-GS15 green 0603 LED, 2.4V Vf and 20mA rated forward current from product evidence."
     design_intent(
         d1,
         "3.3V-present indicator LED for quick confirmation that JP1 and the 12V input path are powering the regulator.",
@@ -271,8 +271,8 @@ def build_circuit():
         ref="U1",
         footprint="Library:SOIC-8_L4.9-W3.9-P1.27-LS6.0-BL",
     )
-    u1.fields["LCSC"] = "C12084"
-    u1.fields["info"] = "TI SN65HVD230DR: pin1 D/TXD, pin2 GND, pin3 VCC, pin4 R/RXD, pin5 VREF may float if unused, pin6 CANL, pin7 CANH, pin8 RS. ICC max 17mA dominant; RS low selects high-speed mode."
+    u1.lcsc = "C12084"
+    u1.info = "TI SN65HVD230DR: pin1 D/TXD, pin2 GND, pin3 VCC, pin4 R/RXD, pin5 VREF may float if unused, pin6 CANL, pin7 CANH, pin8 RS. ICC max 17mA dominant; RS low selects high-speed mode."
     design_intent(
         u1,
         "3.3V CAN transceiver used with Raspberry Pi Pico 2 W GP4/GP5 to identify Mazda MS-CAN H/L by jumper-probing unknown harness pads.",
@@ -291,8 +291,8 @@ def build_circuit():
     u1[3].set_current_sink(0.017)
 
     c4 = Part("Device", "C_Small", value="100nF 10V", ref="C4", footprint="Capacitor_SMD:C_0603_1608Metric")
-    c4.fields["LCSC"] = "NONE"
-    c4.fields["info"] = "100nF 10V local bypass capacitor for SN65HVD230 VCC to GND."
+    c4.lcsc = "NONE"
+    c4.info = "100nF 10V local bypass capacitor for SN65HVD230 VCC to GND."
     design_intent(
         c4,
         "Local high-frequency VCC bypass for U1 SN65HVD230.",
@@ -303,8 +303,8 @@ def build_circuit():
     gnd += c4[2]
 
     c5 = Part("Device", "C_Small", value="4.7uF 10V", ref="C5", footprint="Capacitor_SMD:C_0805_2012Metric")
-    c5.fields["LCSC"] = "NONE"
-    c5.fields["info"] = "4.7uF 10V local bulk capacitor for the SN65HVD230 3.3V supply."
+    c5.lcsc = "NONE"
+    c5.info = "4.7uF 10V local bulk capacitor for the SN65HVD230 3.3V supply."
     design_intent(
         c5,
         "Small local bulk capacitor for the CAN transceiver 3.3V rail.",
@@ -315,8 +315,8 @@ def build_circuit():
     gnd += c5[2]
 
     r3 = Part("Device", "R_Small", value="0Ω", ref="R3", footprint="Resistor_SMD:R_0603_1608Metric")
-    r3.fields["LCSC"] = "NONE"
-    r3.fields["info"] = "0Ω link pulling SN65HVD230 RS low for high-speed mode; can be changed to slope-control resistor if needed."
+    r3.lcsc = "NONE"
+    r3.info = "0Ω link pulling SN65HVD230 RS low for high-speed mode; can be changed to slope-control resistor if needed."
     design_intent(
         r3,
         "RS pull-down for U1 high-speed CAN mode; stuff as 0Ω, change to slope-control resistor only if EMI testing requires it.",
@@ -327,8 +327,8 @@ def build_circuit():
     gnd += r3[2]
 
     r4 = Part("Device", "R_Small", value="120Ω", ref="R4", footprint="Resistor_SMD:R_0805_2012Metric")
-    r4.fields["LCSC"] = "NONE"
-    r4.fields["info"] = "Optional 120Ω CAN termination footprint directly across CANH/CANL. DNP by default; do not populate on the already-terminated Mazda factory MS-CAN bus."
+    r4.lcsc = "NONE"
+    r4.info = "Optional 120Ω CAN termination footprint directly across CANH/CANL. DNP by default; do not populate on the already-terminated Mazda factory MS-CAN bus."
     r4.dnp = True
     design_intent(
         r4,
@@ -346,8 +346,8 @@ def build_circuit():
         ref="JP3",
         footprint="Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm",
     )
-    jp3.fields["LCSC"] = "NONE"
-    jp3.fields["info"] = "Normally-open solder jumper between onboard 3V3 and Pico-facing PICO_3V3 header pins. Leave open by default to avoid backfeeding/fighting the Pico 3.3V regulator; bridge only when one 3.3V source is intentionally selected."
+    jp3.lcsc = "NONE"
+    jp3.info = "Normally-open solder jumper between onboard 3V3 and Pico-facing PICO_3V3 header pins. Leave open by default to avoid backfeeding/fighting the Pico 3.3V regulator; bridge only when one 3.3V source is intentionally selected."
     design_intent(
         jp3,
         "Optional bridge from onboard 3V3 to Pico-facing 3.3V header pins; open by default for backfeed protection.",
@@ -363,8 +363,8 @@ def build_circuit():
         ref="J1",
         footprint="Library:CONN-TH_2P-P2.54_1725656",
     )
-    j1.fields["LCSC"] = "C3029316"
-    j1.fields["info"] = "2-position Phoenix Contact 1725656 2.54mm screw terminal exposing CANH and CANL."
+    j1.lcsc = "C3029316"
+    j1.info = "2-position Phoenix Contact 1725656 2.54mm screw terminal exposing CANH and CANL."
     design_intent(
         j1,
         "2-pin screw terminal exposing CANH and CANL for jumper wires to unknown harness pads or for using an external Waveshare SN65HVD230 module instead of U1.",
@@ -381,8 +381,8 @@ def build_circuit():
         ref="J2",
         footprint="Library:CONN-TH_705430002",
     )
-    j2.fields["LCSC"] = "C504828"
-    j2.fields["info"] = "3-pin 2.54mm CTX header carrying isolated PICO_3V3, GND, and CAN_TX for Pico GP4 transmit wiring. PICO_3V3 is not tied to onboard 3V3 unless JP3 is bridged."
+    j2.lcsc = "C504828"
+    j2.info = "3-pin 2.54mm CTX header carrying isolated PICO_3V3, GND, and CAN_TX for Pico GP4 transmit wiring. PICO_3V3 is not tied to onboard 3V3 unless JP3 is bridged."
     design_intent(
         j2,
         "3-pin CTX header: isolated PICO_3V3, GND, and CAN_TX for a Pico 2 W GP4 transmit jumper.",
@@ -400,8 +400,8 @@ def build_circuit():
         ref="J3",
         footprint="Library:CONN-TH_705430002",
     )
-    j3.fields["LCSC"] = "C504828"
-    j3.fields["info"] = "3-pin 2.54mm CRX header carrying isolated PICO_3V3, GND, and CAN_RX for Pico GP5 receive wiring. PICO_3V3 is not tied to onboard 3V3 unless JP3 is bridged."
+    j3.lcsc = "C504828"
+    j3.info = "3-pin 2.54mm CRX header carrying isolated PICO_3V3, GND, and CAN_RX for Pico GP5 receive wiring. PICO_3V3 is not tied to onboard 3V3 unless JP3 is bridged."
     design_intent(
         j3,
         "3-pin CRX header: isolated PICO_3V3, GND, and CAN_RX for a Pico 2 W GP5 receive jumper.",
@@ -419,8 +419,8 @@ def build_circuit():
         ref="J4",
         footprint="Library:HDR-TH_10P-P2.54-V-M-R2-C5-S2.54",
     )
-    j4.fields["LCSC"] = "C586266"
-    j4.fields["info"] = "10-pin 2.54mm Pico utility header exposing GP4/CAN_TX, GP5/CAN_RX, isolated PICO_3V3, GND, and USB 5V. PICO_3V3 is not tied to onboard 3V3 unless JP3 is bridged."
+    j4.lcsc = "C586266"
+    j4.info = "10-pin 2.54mm Pico utility header exposing GP4/CAN_TX, GP5/CAN_RX, isolated PICO_3V3, GND, and USB 5V. PICO_3V3 is not tied to onboard 3V3 unless JP3 is bridged."
     design_intent(
         j4,
         "10-pin Pico utility header exposing CAN_TX for GP4, CAN_RX for GP5, isolated PICO_3V3, GND, and USB 5V for direct Pico 2 W jumper access.",
@@ -444,8 +444,8 @@ def build_circuit():
         ref="J5",
         footprint="Library:TYPE-C-SMD_TYPE-C-6P_USB4125-GF-A-0190",
     )
-    j5.fields["LCSC"] = "C3197922"
-    j5.fields["info"] = "Molex 2171750001 USB-C power-only receptacle providing raw VBUS for optional Pico bench power. VBUS is ESD-protected by D4 and EMI-filtered by FB1 before becoming 5V_USB."
+    j5.lcsc = "C3197922"
+    j5.info = "Molex 2171750001 USB-C power-only receptacle providing raw VBUS for optional Pico bench power. VBUS is ESD-protected by D4 and EMI-filtered by FB1 before becoming 5V_USB."
     design_intent(
         j5,
         "USB-C power-only input for optional Pico bench power; data pins are not present on this 6-pin power connector.",
@@ -467,8 +467,8 @@ def build_circuit():
         ref="D4",
         footprint="Library:SOD-523_L1.2-W0.8-LS1.6-RD",
     )
-    d4.fields["LCSC"] = "C477993"
-    d4.fields["info"] = "Nexperia PESD5V0V1BB,115 single-line bidirectional 5V ESD diode, SC-79/SOD-523; 5V VRWM, 5.8V breakdown, 12.5V clamp at 4.8A 8/20us. Place from raw USB-C VBUS to GND at J5."
+    d4.lcsc = "C477993"
+    d4.info = "Nexperia PESD5V0V1BB,115 single-line bidirectional 5V ESD diode, SC-79/SOD-523; 5V VRWM, 5.8V breakdown, 12.5V clamp at 4.8A 8/20us. Place from raw USB-C VBUS to GND at J5."
     design_intent(
         d4,
         "Local ESD clamp for USB-C VBUS before the ferrite bead; protects the bench-power input from cable/contact discharge.",
@@ -485,8 +485,8 @@ def build_circuit():
         ref="FB1",
         footprint="Resistor_SMD:R_0603_1608Metric",
     )
-    fb1.fields["LCSC"] = "C404396"
-    fb1.fields["info"] = "TDK KPZ1608SHR601ATD25 ferrite bead: 600Ω at 100MHz, 1A current rating, 150mΩ DCR, 0603. Series EMI bead from raw USB-C VBUS to filtered 5V_USB rail. Pico/USB load current budget is not yet specified."
+    fb1.lcsc = "C404396"
+    fb1.info = "TDK KPZ1608SHR601ATD25 ferrite bead: 600Ω at 100MHz, 1A current rating, 150mΩ DCR, 0603. Series EMI bead from raw USB-C VBUS to filtered 5V_USB rail. Pico/USB load current budget is not yet specified."
     design_intent(
         fb1,
         "Series ferrite bead forming the USB-C VBUS EMI filter with C6 on the filtered 5V_USB side.",
@@ -497,8 +497,8 @@ def build_circuit():
     v5usb += fb1[2]
 
     r5 = Part("Device", "R_Small", value="5.1kΩ", ref="R5", footprint="Resistor_SMD:R_0603_1608Metric")
-    r5.fields["LCSC"] = "NONE"
-    r5.fields["info"] = "5.1kΩ USB-C CC1 Rd pull-down for sink/power-only operation."
+    r5.lcsc = "NONE"
+    r5.info = "5.1kΩ USB-C CC1 Rd pull-down for sink/power-only operation."
     design_intent(
         r5,
         "USB-C CC1 Rd pull-down for sink/power-only operation.",
@@ -509,8 +509,8 @@ def build_circuit():
     gnd += r5[2]
 
     r6 = Part("Device", "R_Small", value="5.1kΩ", ref="R6", footprint="Resistor_SMD:R_0603_1608Metric")
-    r6.fields["LCSC"] = "NONE"
-    r6.fields["info"] = "5.1kΩ USB-C CC2 Rd pull-down for sink/power-only operation."
+    r6.lcsc = "NONE"
+    r6.info = "5.1kΩ USB-C CC2 Rd pull-down for sink/power-only operation."
     design_intent(
         r6,
         "USB-C CC2 Rd pull-down for sink/power-only operation.",
@@ -521,8 +521,8 @@ def build_circuit():
     gnd += r6[2]
 
     c6 = Part("Device", "C_Small", value="1uF 10V", ref="C6", footprint="Capacitor_SMD:C_0603_1608Metric")
-    c6.fields["LCSC"] = "NONE"
-    c6.fields["info"] = "1uF 10V local bypass capacitor on the USB-C 5V rail."
+    c6.lcsc = "NONE"
+    c6.info = "1uF 10V local bypass capacitor on the USB-C 5V rail."
     design_intent(
         c6,
         "Small local bypass for the USB 5V rail used by the Pico header.",
@@ -548,8 +548,8 @@ def build_circuit():
             ref="TP" + str(rail_num),
             footprint="TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm",
         )
-        rail_tp.fields["LCSC"] = "NONE"
-        rail_tp.fields["info"] = rail_intent
+        rail_tp.lcsc = "NONE"
+        rail_tp.info = rail_intent
         design_intent(
             rail_tp,
             rail_intent,

@@ -1,0 +1,2668 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-06-30T18:38:04",
+    "ignored_checks": [
+        {
+            "description": "Footprint has no courtyard defined",
+            "key": "missing_courtyard"
+        },
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads",
+            "key": "footprint_type_mismatch"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.4",
+    "schematic_parity": [],
+    "source": "circuit.kicad_pcb",
+    "unconnected_items": [
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "PTH pad 3 [CAN_RX] of J3",
+                    "pos": {
+                        "x": 156.6269,
+                        "y": 76.86
+                    },
+                    "uuid": "3021a970-d3ed-47e1-be5e-f1acd5f511a1"
+                },
+                {
+                    "description": "Track [CAN_RX] on F.Cu, length 6.8000 mm",
+                    "pos": {
+                        "x": 158.6,
+                        "y": 80.5
+                    },
+                    "uuid": "c7397f4f-fe72-4d6d-90f4-2ebcd44ae2e6"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 2 [CANL] of R4 on F.Cu",
+                    "pos": {
+                        "x": 155.2469,
+                        "y": 52.575
+                    },
+                    "uuid": "2e13ddd3-3b2a-4e3a-8ede-fa1e191a1633"
+                },
+                {
+                    "description": "Track [CANL] on F.Cu, length 3.1125 mm",
+                    "pos": {
+                        "x": 156.597,
+                        "y": 53.6
+                    },
+                    "uuid": "03b51af7-5d92-4355-b2c2-3d6579e631cd"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad B9 [VBUS] of J5 on F.Cu",
+                    "pos": {
+                        "x": 134.16,
+                        "y": 89.92
+                    },
+                    "uuid": "f5e5c48e-badd-4e45-b56f-3b9df3b5dffb"
+                },
+                {
+                    "description": "Pad A9 [VBUS] of J5 on F.Cu",
+                    "pos": {
+                        "x": 137.2,
+                        "y": 89.92
+                    },
+                    "uuid": "5b7afaeb-1bc1-4d78-b1d3-6705d91b16ae"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        }
+    ],
+    "violations": [
+        {
+            "description": "Items shorting two nets (nets 5V_USB and VBUS)",
+            "items": [
+                {
+                    "description": "Track [5V_USB] on F.Cu, length 3.1600 mm",
+                    "pos": {
+                        "x": 134.16,
+                        "y": 86.76
+                    },
+                    "uuid": "470c37e5-1628-4544-9f0c-45dc921364ec"
+                },
+                {
+                    "description": "Pad B9 [VBUS] of J5 on F.Cu",
+                    "pos": {
+                        "x": 134.16,
+                        "y": 89.92
+                    },
+                    "uuid": "f5e5c48e-badd-4e45-b56f-3b9df3b5dffb"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets VBUS and 5V_USB)",
+            "items": [
+                {
+                    "description": "Pad A9 [VBUS] of J5 on F.Cu",
+                    "pos": {
+                        "x": 137.2,
+                        "y": 89.92
+                    },
+                    "uuid": "5b7afaeb-1bc1-4d78-b1d3-6705d91b16ae"
+                },
+                {
+                    "description": "Track [5V_USB] on F.Cu, length 3.1600 mm",
+                    "pos": {
+                        "x": 137.2,
+                        "y": 86.76
+                    },
+                    "uuid": "bf7d397f-51c2-4085-829c-f34d46e4d3be"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets GND and 3V3)",
+            "items": [
+                {
+                    "description": "PTH pad 2 [GND] of J3",
+                    "pos": {
+                        "x": 156.6269,
+                        "y": 79.4
+                    },
+                    "uuid": "682ce297-7626-42b6-9a55-7df675e0ad4f"
+                },
+                {
+                    "description": "Track [3V3] on F.Cu, length 4.1000 mm",
+                    "pos": {
+                        "x": 156.627,
+                        "y": 75.3
+                    },
+                    "uuid": "7de7a09b-cbe0-40f9-938a-2403bece3b94"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets 3V3 and CAN_TX)",
+            "items": [
+                {
+                    "description": "Track [3V3] on F.Cu, length 4.2700 mm",
+                    "pos": {
+                        "x": 156.497,
+                        "y": 70.9
+                    },
+                    "uuid": "82486e72-35e1-483a-a8d4-9d98ea151132"
+                },
+                {
+                    "description": "PTH pad 3 [CAN_TX] of J2",
+                    "pos": {
+                        "x": 156.6269,
+                        "y": 72.76
+                    },
+                    "uuid": "b174748a-b57e-4e9c-9a4f-63ca0f705c41"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets CAN_RX and PICO_3V3)",
+            "items": [
+                {
+                    "description": "Track [CAN_RX] on F.Cu, length 5.6000 mm",
+                    "pos": {
+                        "x": 152.2,
+                        "y": 81.3
+                    },
+                    "uuid": "215b0075-5684-4c4d-82c6-be4d10b7c914"
+                },
+                {
+                    "description": "PTH pad 1 [PICO_3V3] of J3",
+                    "pos": {
+                        "x": 156.6269,
+                        "y": 81.94
+                    },
+                    "uuid": "858a1177-8abc-48bd-af96-04ff754e1421"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets TERM_SW and CANL)",
+            "items": [
+                {
+                    "description": "Track [TERM_SW] on F.Cu, length 2.0376 mm",
+                    "pos": {
+                        "x": 155.247,
+                        "y": 50.5374
+                    },
+                    "uuid": "00f63bb0-2a69-4a7b-8b3b-7692dcf8c6ba"
+                },
+                {
+                    "description": "Pad 2 [CANL] of R4 on F.Cu",
+                    "pos": {
+                        "x": 155.2469,
+                        "y": 52.575
+                    },
+                    "uuid": "2e13ddd3-3b2a-4e3a-8ede-fa1e191a1633"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets GND and PICO_3V3)",
+            "items": [
+                {
+                    "description": "PTH pad 2 [GND] of J3",
+                    "pos": {
+                        "x": 156.6269,
+                        "y": 79.4
+                    },
+                    "uuid": "682ce297-7626-42b6-9a55-7df675e0ad4f"
+                },
+                {
+                    "description": "PTH pad 1 [PICO_3V3] of J2",
+                    "pos": {
+                        "x": 156.6269,
+                        "y": 77.84
+                    },
+                    "uuid": "5d01519e-57e0-42d5-894c-c569314482f9"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets GND and PICO_3V3)",
+            "items": [
+                {
+                    "description": "PTH pad 2 [GND] of J3",
+                    "pos": {
+                        "x": 156.6269,
+                        "y": 79.4
+                    },
+                    "uuid": "682ce297-7626-42b6-9a55-7df675e0ad4f"
+                },
+                {
+                    "description": "PTH pad 1 [PICO_3V3] of J2",
+                    "pos": {
+                        "x": 156.6269,
+                        "y": 77.84
+                    },
+                    "uuid": "5d01519e-57e0-42d5-894c-c569314482f9"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets CAN_RX and GND)",
+            "items": [
+                {
+                    "description": "PTH pad 3 [CAN_RX] of J3",
+                    "pos": {
+                        "x": 156.6269,
+                        "y": 76.86
+                    },
+                    "uuid": "3021a970-d3ed-47e1-be5e-f1acd5f511a1"
+                },
+                {
+                    "description": "PTH pad 2 [GND] of J2",
+                    "pos": {
+                        "x": 156.6269,
+                        "y": 75.3
+                    },
+                    "uuid": "ea377242-da77-41da-8a47-38f157c6a416"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets CAN_RX and PICO_3V3)",
+            "items": [
+                {
+                    "description": "PTH pad 3 [CAN_RX] of J3",
+                    "pos": {
+                        "x": 156.6269,
+                        "y": 76.86
+                    },
+                    "uuid": "3021a970-d3ed-47e1-be5e-f1acd5f511a1"
+                },
+                {
+                    "description": "PTH pad 1 [PICO_3V3] of J2",
+                    "pos": {
+                        "x": 156.6269,
+                        "y": 77.84
+                    },
+                    "uuid": "5d01519e-57e0-42d5-894c-c569314482f9"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets CAN_RX and GND)",
+            "items": [
+                {
+                    "description": "PTH pad 3 [CAN_RX] of J3",
+                    "pos": {
+                        "x": 156.6269,
+                        "y": 76.86
+                    },
+                    "uuid": "3021a970-d3ed-47e1-be5e-f1acd5f511a1"
+                },
+                {
+                    "description": "PTH pad 2 [GND] of J2",
+                    "pos": {
+                        "x": 156.6269,
+                        "y": 75.3
+                    },
+                    "uuid": "ea377242-da77-41da-8a47-38f157c6a416"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets CAN_RX and PICO_3V3)",
+            "items": [
+                {
+                    "description": "PTH pad 3 [CAN_RX] of J3",
+                    "pos": {
+                        "x": 156.6269,
+                        "y": 76.86
+                    },
+                    "uuid": "3021a970-d3ed-47e1-be5e-f1acd5f511a1"
+                },
+                {
+                    "description": "PTH pad 1 [PICO_3V3] of J2",
+                    "pos": {
+                        "x": 156.6269,
+                        "y": 77.84
+                    },
+                    "uuid": "5d01519e-57e0-42d5-894c-c569314482f9"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Courtyards overlap",
+            "items": [
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 156.6269,
+                        "y": 79.4
+                    },
+                    "uuid": "55ad312c-bb3a-470e-a99b-4e8d9d5dffd5"
+                },
+                {
+                    "description": "Footprint J2",
+                    "pos": {
+                        "x": 156.6269,
+                        "y": 75.3
+                    },
+                    "uuid": "955dea4d-310f-4d40-88d5-523fc751e414"
+                }
+            ],
+            "severity": "error",
+            "type": "courtyards_overlap"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 1 [PICO_3V3] of J2",
+                    "pos": {
+                        "x": 156.6269,
+                        "y": 77.84
+                    },
+                    "uuid": "5d01519e-57e0-42d5-894c-c569314482f9"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 156.6269,
+                        "y": 79.4
+                    },
+                    "uuid": "55ad312c-bb3a-470e-a99b-4e8d9d5dffd5"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 2 [GND] of J2",
+                    "pos": {
+                        "x": 156.6269,
+                        "y": 75.3
+                    },
+                    "uuid": "ea377242-da77-41da-8a47-38f157c6a416"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 156.6269,
+                        "y": 79.4
+                    },
+                    "uuid": "55ad312c-bb3a-470e-a99b-4e8d9d5dffd5"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 2 [GND] of J3",
+                    "pos": {
+                        "x": 156.6269,
+                        "y": 79.4
+                    },
+                    "uuid": "682ce297-7626-42b6-9a55-7df675e0ad4f"
+                },
+                {
+                    "description": "Footprint J2",
+                    "pos": {
+                        "x": 156.6269,
+                        "y": 75.3
+                    },
+                    "uuid": "955dea4d-310f-4d40-88d5-523fc751e414"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 3 [CAN_RX] of J3",
+                    "pos": {
+                        "x": 156.6269,
+                        "y": 76.86
+                    },
+                    "uuid": "3021a970-d3ed-47e1-be5e-f1acd5f511a1"
+                },
+                {
+                    "description": "Footprint J2",
+                    "pos": {
+                        "x": 156.6269,
+                        "y": 75.3
+                    },
+                    "uuid": "955dea4d-310f-4d40-88d5-523fc751e414"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [3V3] on F.Cu, length 4.1000 mm",
+                    "pos": {
+                        "x": 156.627,
+                        "y": 75.3
+                    },
+                    "uuid": "7de7a09b-cbe0-40f9-938a-2403bece3b94"
+                },
+                {
+                    "description": "PTH pad 2 [GND] of J3",
+                    "pos": {
+                        "x": 156.6269,
+                        "y": 79.4
+                    },
+                    "uuid": "682ce297-7626-42b6-9a55-7df675e0ad4f"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [3V3] on F.Cu, length 4.1000 mm",
+                    "pos": {
+                        "x": 156.627,
+                        "y": 75.3
+                    },
+                    "uuid": "7de7a09b-cbe0-40f9-938a-2403bece3b94"
+                },
+                {
+                    "description": "PTH pad 3 [CAN_RX] of J3",
+                    "pos": {
+                        "x": 156.6269,
+                        "y": 76.86
+                    },
+                    "uuid": "3021a970-d3ed-47e1-be5e-f1acd5f511a1"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [3V3] on F.Cu, length 4.1000 mm",
+                    "pos": {
+                        "x": 156.627,
+                        "y": 75.3
+                    },
+                    "uuid": "7de7a09b-cbe0-40f9-938a-2403bece3b94"
+                },
+                {
+                    "description": "PTH pad 1 [PICO_3V3] of J2",
+                    "pos": {
+                        "x": 156.6269,
+                        "y": 77.84
+                    },
+                    "uuid": "5d01519e-57e0-42d5-894c-c569314482f9"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [5V_USB] on F.Cu, length 3.1600 mm",
+                    "pos": {
+                        "x": 134.16,
+                        "y": 86.76
+                    },
+                    "uuid": "470c37e5-1628-4544-9f0c-45dc921364ec"
+                },
+                {
+                    "description": "Pad B9 [VBUS] of J5 on F.Cu",
+                    "pos": {
+                        "x": 134.16,
+                        "y": 89.92
+                    },
+                    "uuid": "f5e5c48e-badd-4e45-b56f-3b9df3b5dffb"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [3V3] on F.Cu, length 4.1000 mm",
+                    "pos": {
+                        "x": 156.627,
+                        "y": 75.3
+                    },
+                    "uuid": "7de7a09b-cbe0-40f9-938a-2403bece3b94"
+                },
+                {
+                    "description": "PTH pad 2 [GND] of J2",
+                    "pos": {
+                        "x": 156.6269,
+                        "y": 75.3
+                    },
+                    "uuid": "ea377242-da77-41da-8a47-38f157c6a416"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [3V3] on F.Cu, length 4.2700 mm",
+                    "pos": {
+                        "x": 156.497,
+                        "y": 70.9
+                    },
+                    "uuid": "82486e72-35e1-483a-a8d4-9d98ea151132"
+                },
+                {
+                    "description": "PTH pad 2 [GND] of J2",
+                    "pos": {
+                        "x": 156.6269,
+                        "y": 75.3
+                    },
+                    "uuid": "ea377242-da77-41da-8a47-38f157c6a416"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [3V3] on F.Cu, length 4.2700 mm",
+                    "pos": {
+                        "x": 156.497,
+                        "y": 70.9
+                    },
+                    "uuid": "82486e72-35e1-483a-a8d4-9d98ea151132"
+                },
+                {
+                    "description": "PTH pad 3 [CAN_TX] of J2",
+                    "pos": {
+                        "x": 156.6269,
+                        "y": 72.76
+                    },
+                    "uuid": "b174748a-b57e-4e9c-9a4f-63ca0f705c41"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [5V_USB] on F.Cu, length 3.1600 mm",
+                    "pos": {
+                        "x": 137.2,
+                        "y": 86.76
+                    },
+                    "uuid": "bf7d397f-51c2-4085-829c-f34d46e4d3be"
+                },
+                {
+                    "description": "Pad A9 [VBUS] of J5 on F.Cu",
+                    "pos": {
+                        "x": 137.2,
+                        "y": 89.92
+                    },
+                    "uuid": "5b7afaeb-1bc1-4d78-b1d3-6705d91b16ae"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [CAN_RX] on F.Cu, length 5.6000 mm",
+                    "pos": {
+                        "x": 152.2,
+                        "y": 81.3
+                    },
+                    "uuid": "215b0075-5684-4c4d-82c6-be4d10b7c914"
+                },
+                {
+                    "description": "PTH pad 1 [PICO_3V3] of J3",
+                    "pos": {
+                        "x": 156.6269,
+                        "y": 81.94
+                    },
+                    "uuid": "858a1177-8abc-48bd-af96-04ff754e1421"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "PTH pad 2 [GND] of J3",
+                    "pos": {
+                        "x": 156.6269,
+                        "y": 79.4
+                    },
+                    "uuid": "682ce297-7626-42b6-9a55-7df675e0ad4f"
+                },
+                {
+                    "description": "PTH pad 1 [PICO_3V3] of J2",
+                    "pos": {
+                        "x": 156.6269,
+                        "y": 77.84
+                    },
+                    "uuid": "5d01519e-57e0-42d5-894c-c569314482f9"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Rear solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "PTH pad 2 [GND] of J3",
+                    "pos": {
+                        "x": 156.6269,
+                        "y": 79.4
+                    },
+                    "uuid": "682ce297-7626-42b6-9a55-7df675e0ad4f"
+                },
+                {
+                    "description": "PTH pad 1 [PICO_3V3] of J2",
+                    "pos": {
+                        "x": 156.6269,
+                        "y": 77.84
+                    },
+                    "uuid": "5d01519e-57e0-42d5-894c-c569314482f9"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [TERM_SW] on F.Cu, length 2.0376 mm",
+                    "pos": {
+                        "x": 155.247,
+                        "y": 50.5374
+                    },
+                    "uuid": "00f63bb0-2a69-4a7b-8b3b-7692dcf8c6ba"
+                },
+                {
+                    "description": "Pad 2 [CANL] of R4 on F.Cu",
+                    "pos": {
+                        "x": 155.2469,
+                        "y": 52.575
+                    },
+                    "uuid": "2e13ddd3-3b2a-4e3a-8ede-fa1e191a1633"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "PTH pad 3 [CAN_RX] of J3",
+                    "pos": {
+                        "x": 156.6269,
+                        "y": 76.86
+                    },
+                    "uuid": "3021a970-d3ed-47e1-be5e-f1acd5f511a1"
+                },
+                {
+                    "description": "PTH pad 1 [PICO_3V3] of J2",
+                    "pos": {
+                        "x": 156.6269,
+                        "y": 77.84
+                    },
+                    "uuid": "5d01519e-57e0-42d5-894c-c569314482f9"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "PTH pad 3 [CAN_RX] of J3",
+                    "pos": {
+                        "x": 156.6269,
+                        "y": 76.86
+                    },
+                    "uuid": "3021a970-d3ed-47e1-be5e-f1acd5f511a1"
+                },
+                {
+                    "description": "PTH pad 2 [GND] of J2",
+                    "pos": {
+                        "x": 156.6269,
+                        "y": 75.3
+                    },
+                    "uuid": "ea377242-da77-41da-8a47-38f157c6a416"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Rear solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "PTH pad 3 [CAN_RX] of J3",
+                    "pos": {
+                        "x": 156.6269,
+                        "y": 76.86
+                    },
+                    "uuid": "3021a970-d3ed-47e1-be5e-f1acd5f511a1"
+                },
+                {
+                    "description": "PTH pad 1 [PICO_3V3] of J2",
+                    "pos": {
+                        "x": 156.6269,
+                        "y": 77.84
+                    },
+                    "uuid": "5d01519e-57e0-42d5-894c-c569314482f9"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Rear solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "PTH pad 3 [CAN_RX] of J3",
+                    "pos": {
+                        "x": 156.6269,
+                        "y": 76.86
+                    },
+                    "uuid": "3021a970-d3ed-47e1-be5e-f1acd5f511a1"
+                },
+                {
+                    "description": "PTH pad 2 [GND] of J2",
+                    "pos": {
+                        "x": 156.6269,
+                        "y": 75.3
+                    },
+                    "uuid": "ea377242-da77-41da-8a47-38f157c6a416"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [3V3] on F.Cu, length 1.2549 mm",
+                    "pos": {
+                        "x": 136.658,
+                        "y": 61.76
+                    },
+                    "uuid": "397dd6f7-0d87-42c0-abed-9dddfa363744"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [3V3] on F.Cu, length 1.5370 mm",
+                    "pos": {
+                        "x": 138.83,
+                        "y": 61.76
+                    },
+                    "uuid": "a1f2eb50-1b6c-4d0e-9f4b-20fe12b24705"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [CAN_RS] on F.Cu, length 1.9021 mm",
+                    "pos": {
+                        "x": 153.562,
+                        "y": 58.3779
+                    },
+                    "uuid": "2706e53b-17a8-433e-86d6-d174b7310072"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [CAN_TX] on F.Cu, length 0.2000 mm",
+                    "pos": {
+                        "x": 149.3,
+                        "y": 75.3
+                    },
+                    "uuid": "3761a3d8-25bb-498d-aac1-64e34ce5eec8"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [CANL] on F.Cu, length 0.3584 mm",
+                    "pos": {
+                        "x": 156.597,
+                        "y": 54.3584
+                    },
+                    "uuid": "e899a208-c94c-47da-b3f1-44a8729b4d61"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Silkscreen clipped by board edge",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 162.0,
+                        "y": 96.5
+                    },
+                    "uuid": "6d70c860-2298-4b9f-878f-935e170a6efb"
+                },
+                {
+                    "description": "Segment of J5 on F.Silkscreen",
+                    "pos": {
+                        "x": 131.21,
+                        "y": 94.87
+                    },
+                    "uuid": "dde81428-f2bd-442b-84ef-3bd887358206"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_edge_clearance"
+        },
+        {
+            "description": "Silkscreen clipped by board edge",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 162.0,
+                        "y": 96.5
+                    },
+                    "uuid": "6d70c860-2298-4b9f-878f-935e170a6efb"
+                },
+                {
+                    "description": "Segment of J5 on F.Silkscreen",
+                    "pos": {
+                        "x": 131.21,
+                        "y": 96.4
+                    },
+                    "uuid": "51549bde-e9e6-4678-9d04-2b8232a803fa"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_edge_clearance"
+        },
+        {
+            "description": "Silkscreen clipped by board edge",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 162.0,
+                        "y": 96.5
+                    },
+                    "uuid": "6d70c860-2298-4b9f-878f-935e170a6efb"
+                },
+                {
+                    "description": "Segment of J5 on F.Silkscreen",
+                    "pos": {
+                        "x": 140.15,
+                        "y": 96.4
+                    },
+                    "uuid": "1ba61dfc-1997-4281-8066-dcb0f82143d1"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_edge_clearance"
+        },
+        {
+            "description": "Drilled hole too close to other hole (board setup constraints min 0.2495 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 3 [CAN_RX] of J3",
+                    "pos": {
+                        "x": 156.6269,
+                        "y": 76.86
+                    },
+                    "uuid": "3021a970-d3ed-47e1-be5e-f1acd5f511a1"
+                },
+                {
+                    "description": "PTH pad 1 [PICO_3V3] of J2",
+                    "pos": {
+                        "x": 156.6269,
+                        "y": 77.84
+                    },
+                    "uuid": "5d01519e-57e0-42d5-894c-c569314482f9"
+                }
+            ],
+            "severity": "warning",
+            "type": "hole_to_hole"
+        },
+        {
+            "description": "Footprint 'C_1206_3216Metric' does not match copy in library 'Capacitor_SMD'",
+            "items": [
+                {
+                    "description": "Footprint C1",
+                    "pos": {
+                        "x": 144.8,
+                        "y": 58.96
+                    },
+                    "uuid": "0048117a-cd7b-4ecb-b748-d272a52ecb31"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'TestPoint_THTPad_D2.5mm_Drill1.2mm' does not match copy in library 'TestPoint'",
+            "items": [
+                {
+                    "description": "Footprint TP14",
+                    "pos": {
+                        "x": 118.5,
+                        "y": 52.5
+                    },
+                    "uuid": "07b7e760-3141-4c0a-adfe-2f6d74706a26"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'C_0603_1608Metric' does not match copy in library 'Capacitor_SMD'",
+            "items": [
+                {
+                    "description": "Footprint C6",
+                    "pos": {
+                        "x": 133.36,
+                        "y": 85.06
+                    },
+                    "uuid": "0b0316db-3ced-43d7-af9b-9fdec7227da0"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'TestPoint_THTPad_D2.5mm_Drill1.2mm' does not match copy in library 'TestPoint'",
+            "items": [
+                {
+                    "description": "Footprint TP9",
+                    "pos": {
+                        "x": 113.5,
+                        "y": 83.0
+                    },
+                    "uuid": "0b822705-01b4-4f4b-aa32-b521f04f5852"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'SOT-223-4_L6.5-W3.5-P2.30-LS7.0-BR' does not match copy in library 'Library'",
+            "items": [
+                {
+                    "description": "Footprint U2",
+                    "pos": {
+                        "x": 136.0,
+                        "y": 61.76
+                    },
+                    "uuid": "0bccf2e6-b140-4de6-89a0-b986a1288a30"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'TestPoint_THTPad_D2.5mm_Drill1.2mm' does not match copy in library 'TestPoint'",
+            "items": [
+                {
+                    "description": "Footprint TP37",
+                    "pos": {
+                        "x": 128.5,
+                        "y": 57.5
+                    },
+                    "uuid": "0e250f66-af06-470d-8f69-b00a40d4a073"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'TestPoint_THTPad_D2.0mm_Drill1.0mm' does not match copy in library 'TestPoint'",
+            "items": [
+                {
+                    "description": "Footprint TP44",
+                    "pos": {
+                        "x": 143.6,
+                        "y": 93.8
+                    },
+                    "uuid": "10ed39c0-b032-48e8-9210-8644865d51ef"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'TestPoint_THTPad_D2.5mm_Drill1.2mm' does not match copy in library 'TestPoint'",
+            "items": [
+                {
+                    "description": "Footprint TP36",
+                    "pos": {
+                        "x": 128.5,
+                        "y": 52.5
+                    },
+                    "uuid": "11638cb1-cc83-49da-9e1e-d7f1e0a25292"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'R_0603_1608Metric' does not match copy in library 'Resistor_SMD'",
+            "items": [
+                {
+                    "description": "Footprint R3",
+                    "pos": {
+                        "x": 152.7469,
+                        "y": 55.9
+                    },
+                    "uuid": "1d4c71c6-faba-43cf-8666-a6338c8ef563"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'TestPoint_THTPad_D2.5mm_Drill1.2mm' does not match copy in library 'TestPoint'",
+            "items": [
+                {
+                    "description": "Footprint TP39",
+                    "pos": {
+                        "x": 113.5,
+                        "y": 42.5
+                    },
+                    "uuid": "2446ff49-e15e-4524-a495-853bc32bb490"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'SOIC-8_L4.9-W3.9-P1.27-LS6.0-BL' does not match copy in library 'Library'",
+            "items": [
+                {
+                    "description": "Footprint U1",
+                    "pos": {
+                        "x": 155.4719,
+                        "y": 62.85
+                    },
+                    "uuid": "2a68b443-b14c-41a5-889d-ee67ca6a9243"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'TestPoint_THTPad_D2.5mm_Drill1.2mm' does not match copy in library 'TestPoint'",
+            "items": [
+                {
+                    "description": "Footprint TP13",
+                    "pos": {
+                        "x": 118.5,
+                        "y": 47.5
+                    },
+                    "uuid": "304c2b99-81f9-48d9-805f-1f585e82028e"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'TestPoint_THTPad_D2.5mm_Drill1.2mm' does not match copy in library 'TestPoint'",
+            "items": [
+                {
+                    "description": "Footprint TP29",
+                    "pos": {
+                        "x": 123.5,
+                        "y": 72.5
+                    },
+                    "uuid": "30f15b43-db01-4926-8363-2c954d9627ae"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'TestPoint_THTPad_D2.5mm_Drill1.2mm' does not match copy in library 'TestPoint'",
+            "items": [
+                {
+                    "description": "Footprint TP21",
+                    "pos": {
+                        "x": 118.5,
+                        "y": 88.5
+                    },
+                    "uuid": "33c4027d-4c17-4212-8029-8ee8dc943a54"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'TestPoint_THTPad_D2.5mm_Drill1.2mm' does not match copy in library 'TestPoint'",
+            "items": [
+                {
+                    "description": "Footprint TP25",
+                    "pos": {
+                        "x": 123.5,
+                        "y": 52.5
+                    },
+                    "uuid": "35bfffcd-f1ef-4dee-96b9-1d207cd76437"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'TestPoint_THTPad_D2.5mm_Drill1.2mm' does not match copy in library 'TestPoint'",
+            "items": [
+                {
+                    "description": "Footprint TP30",
+                    "pos": {
+                        "x": 123.5,
+                        "y": 77.5
+                    },
+                    "uuid": "39915b97-5d9c-419b-b378-ecbd66ad9ee4"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'TestPoint_THTPad_D2.5mm_Drill1.2mm' does not match copy in library 'TestPoint'",
+            "items": [
+                {
+                    "description": "Footprint TP20",
+                    "pos": {
+                        "x": 118.5,
+                        "y": 83.0
+                    },
+                    "uuid": "3ab1780c-bca0-4e9e-918f-fd2de928348d"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'TestPoint_THTPad_D2.0mm_Drill1.0mm' does not match copy in library 'TestPoint'",
+            "items": [
+                {
+                    "description": "Footprint TP42",
+                    "pos": {
+                        "x": 140.6,
+                        "y": 86.7
+                    },
+                    "uuid": "3d8d785a-078f-43e2-a178-75d2c8b553a6"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'TestPoint_THTPad_D2.0mm_Drill1.0mm' does not match copy in library 'TestPoint'",
+            "items": [
+                {
+                    "description": "Footprint TP43",
+                    "pos": {
+                        "x": 141.6,
+                        "y": 55.7
+                    },
+                    "uuid": "3d9da346-40ce-4420-a1ae-7ad4c4174442"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'TestPoint_THTPad_D2.5mm_Drill1.2mm' does not match copy in library 'TestPoint'",
+            "items": [
+                {
+                    "description": "Footprint TP24",
+                    "pos": {
+                        "x": 123.5,
+                        "y": 47.5
+                    },
+                    "uuid": "410bea03-5ff1-4907-ad2e-dfbd9d1cdca6"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'C_0603_1608Metric' does not match copy in library 'Capacitor_SMD'",
+            "items": [
+                {
+                    "description": "Footprint C3",
+                    "pos": {
+                        "x": 147.8,
+                        "y": 60.46
+                    },
+                    "uuid": "4b9e0b87-2d80-489c-8847-e307706755ce"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'TestPoint_THTPad_D2.5mm_Drill1.2mm' does not match copy in library 'TestPoint'",
+            "items": [
+                {
+                    "description": "Footprint TP3",
+                    "pos": {
+                        "x": 113.5,
+                        "y": 52.5
+                    },
+                    "uuid": "4fc433fd-911e-455f-ad8a-7d6ac763c3ad"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'C_0603_1608Metric' does not match copy in library 'Capacitor_SMD'",
+            "items": [
+                {
+                    "description": "Footprint C4",
+                    "pos": {
+                        "x": 155.5469,
+                        "y": 68.9
+                    },
+                    "uuid": "58bcaddc-4be7-4c19-94f8-633ab75b2ae1"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'R_0603_1608Metric' does not match copy in library 'Resistor_SMD'",
+            "items": [
+                {
+                    "description": "Footprint R6",
+                    "pos": {
+                        "x": 137.0,
+                        "y": 85.1
+                    },
+                    "uuid": "5ec85af2-86b8-4270-8587-33e57edbdec2"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'TestPoint_THTPad_D2.5mm_Drill1.2mm' does not match copy in library 'TestPoint'",
+            "items": [
+                {
+                    "description": "Footprint TP26",
+                    "pos": {
+                        "x": 123.5,
+                        "y": 57.5
+                    },
+                    "uuid": "5ef1116a-ebcb-4120-a338-64f4a9a6d207"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'TestPoint_THTPad_D2.5mm_Drill1.2mm' does not match copy in library 'TestPoint'",
+            "items": [
+                {
+                    "description": "Footprint TP40",
+                    "pos": {
+                        "x": 113.5,
+                        "y": 47.5
+                    },
+                    "uuid": "60784b41-29b6-45c3-b41e-3bcdbfff62d9"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'CONN-TH_2P-P2.54_1725656' does not match copy in library 'Library'",
+            "items": [
+                {
+                    "description": "Footprint J1",
+                    "pos": {
+                        "x": 155.3169,
+                        "y": 43.1
+                    },
+                    "uuid": "610197cd-ff2c-4bbf-a5fa-2db0cf07662d"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'R_0603_1608Metric' does not match copy in library 'Resistor_SMD'",
+            "items": [
+                {
+                    "description": "Footprint R5",
+                    "pos": {
+                        "x": 136.0,
+                        "y": 83.6
+                    },
+                    "uuid": "6a0f5205-79a1-4379-9a2a-9616f83a4569"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'TestPoint_THTPad_D2.5mm_Drill1.2mm' does not match copy in library 'TestPoint'",
+            "items": [
+                {
+                    "description": "Footprint TP38",
+                    "pos": {
+                        "x": 128.5,
+                        "y": 62.5
+                    },
+                    "uuid": "7de21846-607c-4811-8d93-51b75ae6373f"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'TestPoint_THTPad_D2.5mm_Drill1.2mm' does not match copy in library 'TestPoint'",
+            "items": [
+                {
+                    "description": "Footprint TP18",
+                    "pos": {
+                        "x": 118.5,
+                        "y": 72.5
+                    },
+                    "uuid": "87dfca19-42d3-47fd-8f58-aa0061cfe660"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'TestPoint_THTPad_D2.0mm_Drill1.0mm' does not match copy in library 'TestPoint'",
+            "items": [
+                {
+                    "description": "Footprint TP45",
+                    "pos": {
+                        "x": 151.4,
+                        "y": 53.2
+                    },
+                    "uuid": "89f02457-2385-48c7-9ae9-846eac7b04e3"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'TestPoint_THTPad_D2.5mm_Drill1.2mm' does not match copy in library 'TestPoint'",
+            "items": [
+                {
+                    "description": "Footprint TP32",
+                    "pos": {
+                        "x": 123.5,
+                        "y": 88.5
+                    },
+                    "uuid": "8b8ff7bc-119f-41a2-9144-7c704436d3ae"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'TestPoint_THTPad_D2.5mm_Drill1.2mm' does not match copy in library 'TestPoint'",
+            "items": [
+                {
+                    "description": "Footprint TP31",
+                    "pos": {
+                        "x": 123.5,
+                        "y": 83.0
+                    },
+                    "uuid": "8c3829b6-b215-4971-873b-c3d81d751add"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'TestPoint_THTPad_D2.5mm_Drill1.2mm' does not match copy in library 'TestPoint'",
+            "items": [
+                {
+                    "description": "Footprint TP28",
+                    "pos": {
+                        "x": 123.5,
+                        "y": 67.5
+                    },
+                    "uuid": "90d05856-3a13-4d0e-8f5c-724c53dedddc"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'TestPoint_THTPad_D2.5mm_Drill1.2mm' does not match copy in library 'TestPoint'",
+            "items": [
+                {
+                    "description": "Footprint TP5",
+                    "pos": {
+                        "x": 113.5,
+                        "y": 62.5
+                    },
+                    "uuid": "935639fd-b526-402e-b0b2-71d3886c91a3"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'CP_EIA-3528-21_Kemet-B_HandSolder' does not match copy in library 'Capacitor_Tantalum_SMD'",
+            "items": [
+                {
+                    "description": "Footprint C2",
+                    "pos": {
+                        "x": 142.8275,
+                        "y": 63.26
+                    },
+                    "uuid": "99c5860b-c2bc-4593-b76d-5428e721d0f1"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'TestPoint_THTPad_D2.5mm_Drill1.2mm' does not match copy in library 'TestPoint'",
+            "items": [
+                {
+                    "description": "Footprint TP34",
+                    "pos": {
+                        "x": 128.5,
+                        "y": 42.5
+                    },
+                    "uuid": "9ec92f23-869d-4c3a-b8d3-fd48468177da"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'TestPoint_THTPad_D2.5mm_Drill1.2mm' does not match copy in library 'TestPoint'",
+            "items": [
+                {
+                    "description": "Footprint TP27",
+                    "pos": {
+                        "x": 123.5,
+                        "y": 62.5
+                    },
+                    "uuid": "a0b95041-e397-4935-b343-0e7903377118"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'TestPoint_THTPad_D2.5mm_Drill1.2mm' does not match copy in library 'TestPoint'",
+            "items": [
+                {
+                    "description": "Footprint TP7",
+                    "pos": {
+                        "x": 113.5,
+                        "y": 72.5
+                    },
+                    "uuid": "a482ffbc-ea8b-4116-90fa-14661f9b53a8"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'TestPoint_THTPad_D2.5mm_Drill1.2mm' does not match copy in library 'TestPoint'",
+            "items": [
+                {
+                    "description": "Footprint TP17",
+                    "pos": {
+                        "x": 118.5,
+                        "y": 67.5
+                    },
+                    "uuid": "a8a885ff-0289-4799-9364-011757428d2b"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'TestPoint_THTPad_D2.5mm_Drill1.2mm' does not match copy in library 'TestPoint'",
+            "items": [
+                {
+                    "description": "Footprint TP1",
+                    "pos": {
+                        "x": 140.8,
+                        "y": 42.5
+                    },
+                    "uuid": "a98b8794-8cca-41d7-936e-e9410bff655f"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'TestPoint_THTPad_D2.5mm_Drill1.2mm' does not match copy in library 'TestPoint'",
+            "items": [
+                {
+                    "description": "Footprint TP10",
+                    "pos": {
+                        "x": 113.5,
+                        "y": 88.5
+                    },
+                    "uuid": "b1cb73d0-7fb3-4f04-b397-137a965eb847"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'R_0805_2012Metric' does not match copy in library 'Resistor_SMD'",
+            "items": [
+                {
+                    "description": "Footprint R4",
+                    "pos": {
+                        "x": 155.2469,
+                        "y": 53.4875
+                    },
+                    "uuid": "b45e9268-b502-4983-b0b6-2fb9f84d8942"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'TestPoint_THTPad_D2.0mm_Drill1.0mm' does not match copy in library 'TestPoint'",
+            "items": [
+                {
+                    "description": "Footprint TP46",
+                    "pos": {
+                        "x": 158.7,
+                        "y": 54.1
+                    },
+                    "uuid": "b586a3f3-35a3-4310-a2e3-eeb6edde65b1"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'TestPoint_THTPad_D2.5mm_Drill1.2mm' does not match copy in library 'TestPoint'",
+            "items": [
+                {
+                    "description": "Footprint TP22",
+                    "pos": {
+                        "x": 118.5,
+                        "y": 94.0
+                    },
+                    "uuid": "b9eb00ec-c93a-44c4-b32d-a314764746ed"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'TestPoint_THTPad_D2.5mm_Drill1.2mm' does not match copy in library 'TestPoint'",
+            "items": [
+                {
+                    "description": "Footprint TP23",
+                    "pos": {
+                        "x": 123.5,
+                        "y": 42.5
+                    },
+                    "uuid": "ba5f9e50-9d7a-4eff-955b-450ed9dd7116"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'TYPE-C-SMD_TYPE-C-6P_USB4125-GF-A-0190' does not match copy in library 'Library'",
+            "items": [
+                {
+                    "description": "Footprint J5",
+                    "pos": {
+                        "x": 135.68,
+                        "y": 91.86
+                    },
+                    "uuid": "babbfb0a-d30c-4d5b-97cd-ff0874d5cee9"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'SOT-23-3_L2.9-W1.3-P1.90-LS2.3-BR' does not match copy in library 'Library'",
+            "items": [
+                {
+                    "description": "Footprint Q1",
+                    "pos": {
+                        "x": 137.15,
+                        "y": 49.1
+                    },
+                    "uuid": "badf25e1-a339-4e74-a4e6-4ac718d5a844"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'TestPoint_THTPad_D2.5mm_Drill1.2mm' does not match copy in library 'TestPoint'",
+            "items": [
+                {
+                    "description": "Footprint TP35",
+                    "pos": {
+                        "x": 128.5,
+                        "y": 47.5
+                    },
+                    "uuid": "bce64ebd-4672-4f5b-b7c0-fc32ed338714"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'TestPoint_THTPad_D2.5mm_Drill1.2mm' does not match copy in library 'TestPoint'",
+            "items": [
+                {
+                    "description": "Footprint TP11",
+                    "pos": {
+                        "x": 113.5,
+                        "y": 94.0
+                    },
+                    "uuid": "c12659de-0230-458e-9317-e6693087f8c0"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'TestPoint_THTPad_D2.5mm_Drill1.2mm' does not match copy in library 'TestPoint'",
+            "items": [
+                {
+                    "description": "Footprint TP6",
+                    "pos": {
+                        "x": 113.5,
+                        "y": 67.5
+                    },
+                    "uuid": "c369fb7e-2240-4439-a7fb-5926dc318662"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'TestPoint_THTPad_D2.5mm_Drill1.2mm' does not match copy in library 'TestPoint'",
+            "items": [
+                {
+                    "description": "Footprint TP16",
+                    "pos": {
+                        "x": 118.5,
+                        "y": 62.5
+                    },
+                    "uuid": "cbfb33bb-f410-4914-812e-c973aafb7784"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm' does not match copy in library 'Jumper'",
+            "items": [
+                {
+                    "description": "Footprint JP2",
+                    "pos": {
+                        "x": 155.9469,
+                        "y": 50.4875
+                    },
+                    "uuid": "cd73fd2a-5c07-4abc-a9d2-d56b8afecf2e"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'TestPoint_THTPad_D2.5mm_Drill1.2mm' does not match copy in library 'TestPoint'",
+            "items": [
+                {
+                    "description": "Footprint TP33",
+                    "pos": {
+                        "x": 123.5,
+                        "y": 94.0
+                    },
+                    "uuid": "cf126c46-e809-433a-af3f-1d36cad2dbb3"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'TestPoint_THTPad_D2.5mm_Drill1.2mm' does not match copy in library 'TestPoint'",
+            "items": [
+                {
+                    "description": "Footprint TP8",
+                    "pos": {
+                        "x": 113.5,
+                        "y": 77.5
+                    },
+                    "uuid": "cf8a956b-adc8-413a-8576-d52ef1a2f960"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'TestPoint_THTPad_D2.5mm_Drill1.2mm' does not match copy in library 'TestPoint'",
+            "items": [
+                {
+                    "description": "Footprint TP15",
+                    "pos": {
+                        "x": 118.5,
+                        "y": 57.5
+                    },
+                    "uuid": "cfe88d74-bd89-4257-be70-3b98a3e01f7d"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'TestPoint_THTPad_D2.5mm_Drill1.2mm' does not match copy in library 'TestPoint'",
+            "items": [
+                {
+                    "description": "Footprint TP4",
+                    "pos": {
+                        "x": 113.5,
+                        "y": 57.5
+                    },
+                    "uuid": "d099a751-4e7d-425b-adc2-65248bde21f5"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'TestPoint_THTPad_D2.0mm_Drill1.0mm' does not match copy in library 'TestPoint'",
+            "items": [
+                {
+                    "description": "Footprint TP41",
+                    "pos": {
+                        "x": 129.0,
+                        "y": 66.0
+                    },
+                    "uuid": "d471f34a-35f7-479b-9d93-5c7820e00e04"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'TestPoint_THTPad_D2.5mm_Drill1.2mm' does not match copy in library 'TestPoint'",
+            "items": [
+                {
+                    "description": "Footprint TP19",
+                    "pos": {
+                        "x": 118.5,
+                        "y": 77.5
+                    },
+                    "uuid": "db3597e6-a383-474e-a196-5fc53072ed51"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'LED_0603_1608Metric' does not match copy in library 'LED_SMD'",
+            "items": [
+                {
+                    "description": "Footprint D1",
+                    "pos": {
+                        "x": 145.775,
+                        "y": 65.2
+                    },
+                    "uuid": "e1fc960c-fb91-43f0-8810-42e1dc5d93f8"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'SolderJumper-3_P2.0mm_Open_TrianglePad1.0x1.5mm' does not match copy in library 'Jumper'",
+            "items": [
+                {
+                    "description": "Footprint JP1",
+                    "pos": {
+                        "x": 137.1,
+                        "y": 45.85
+                    },
+                    "uuid": "e4b47cc5-4c86-4c8e-96f8-8a377369169b"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'R_0603_1608Metric' does not match copy in library 'Resistor_SMD'",
+            "items": [
+                {
+                    "description": "Footprint R2",
+                    "pos": {
+                        "x": 145.775,
+                        "y": 62.11
+                    },
+                    "uuid": "e873f902-f956-405c-a0ed-597633ae7459"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'TestPoint_THTPad_D2.5mm_Drill1.2mm' does not match copy in library 'TestPoint'",
+            "items": [
+                {
+                    "description": "Footprint TP2",
+                    "pos": {
+                        "x": 133.5,
+                        "y": 42.5
+                    },
+                    "uuid": "f5f98973-e76d-4063-87ef-840b5183f395"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'R_0603_1608Metric' does not match copy in library 'Resistor_SMD'",
+            "items": [
+                {
+                    "description": "Footprint R1",
+                    "pos": {
+                        "x": 135.35,
+                        "y": 51.81
+                    },
+                    "uuid": "f7fc00d9-0b8d-4280-b097-d5bba96ebf78"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'TestPoint_THTPad_D2.5mm_Drill1.2mm' does not match copy in library 'TestPoint'",
+            "items": [
+                {
+                    "description": "Footprint TP12",
+                    "pos": {
+                        "x": 118.5,
+                        "y": 42.5
+                    },
+                    "uuid": "f8ccd36d-d828-4dfa-bea4-03f33b4c5551"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'C_0805_2012Metric' does not match copy in library 'Capacitor_SMD'",
+            "items": [
+                {
+                    "description": "Footprint C5",
+                    "pos": {
+                        "x": 155.5469,
+                        "y": 70.9
+                    },
+                    "uuid": "fa8eb524-e5eb-4bd6-abf2-8c21e8d6f81a"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of J2 on F.Silkscreen",
+                    "pos": {
+                        "x": 154.0869,
+                        "y": 69.96
+                    },
+                    "uuid": "155fd664-e2e9-49c3-848a-62f77cd6fbb2"
+                },
+                {
+                    "description": "Segment of J3 on F.Silkscreen",
+                    "pos": {
+                        "x": 159.1569,
+                        "y": 74.07
+                    },
+                    "uuid": "813760ec-aad5-469e-a0ae-f2e7a5b60040"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of J3 on F.Silkscreen",
+                    "pos": {
+                        "x": 160.6869,
+                        "y": 75.32
+                    },
+                    "uuid": "737a52b1-c1d4-4cba-b198-ad248456bf00"
+                },
+                {
+                    "description": "Segment of J2 on F.Silkscreen",
+                    "pos": {
+                        "x": 160.6869,
+                        "y": 79.38
+                    },
+                    "uuid": "906c101e-0fcc-4d55-b607-5f081181fac5"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of J3 on F.Silkscreen",
+                    "pos": {
+                        "x": 154.0869,
+                        "y": 74.06
+                    },
+                    "uuid": "00b8ca99-41db-460c-9dbd-64ad70d3e5d5"
+                },
+                {
+                    "description": "Segment of J2 on F.Silkscreen",
+                    "pos": {
+                        "x": 154.0869,
+                        "y": 80.64
+                    },
+                    "uuid": "c1369add-4626-4eef-b0ad-a3304c13977d"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of J3 on F.Silkscreen",
+                    "pos": {
+                        "x": 154.0869,
+                        "y": 74.06
+                    },
+                    "uuid": "00b8ca99-41db-460c-9dbd-64ad70d3e5d5"
+                },
+                {
+                    "description": "Segment of J2 on F.Silkscreen",
+                    "pos": {
+                        "x": 154.0869,
+                        "y": 69.96
+                    },
+                    "uuid": "155fd664-e2e9-49c3-848a-62f77cd6fbb2"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of J3 on F.Silkscreen",
+                    "pos": {
+                        "x": 160.6869,
+                        "y": 83.48
+                    },
+                    "uuid": "035eb92f-37ac-4ece-807f-14dff8589a82"
+                },
+                {
+                    "description": "Segment of J2 on F.Silkscreen",
+                    "pos": {
+                        "x": 159.1469,
+                        "y": 79.38
+                    },
+                    "uuid": "0cf2b4af-2451-44c4-a971-2c92e4d90efe"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of J3 on F.Silkscreen",
+                    "pos": {
+                        "x": 160.6869,
+                        "y": 83.48
+                    },
+                    "uuid": "035eb92f-37ac-4ece-807f-14dff8589a82"
+                },
+                {
+                    "description": "Circle of J2 on F.Silkscreen",
+                    "pos": {
+                        "x": 160.6869,
+                        "y": 80.63
+                    },
+                    "uuid": "3245810d-3f00-4a87-8090-669c1205eb0a"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of J3 on F.Silkscreen",
+                    "pos": {
+                        "x": 160.6869,
+                        "y": 83.48
+                    },
+                    "uuid": "035eb92f-37ac-4ece-807f-14dff8589a82"
+                },
+                {
+                    "description": "Segment of J2 on F.Silkscreen",
+                    "pos": {
+                        "x": 160.6869,
+                        "y": 79.38
+                    },
+                    "uuid": "906c101e-0fcc-4d55-b607-5f081181fac5"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of D2",
+                    "pos": {
+                        "x": 135.54,
+                        "y": 59.06
+                    },
+                    "uuid": "7926d7fc-d00f-4083-9fd2-12d0078ae0a2"
+                },
+                {
+                    "description": "Segment of U2 on F.Silkscreen",
+                    "pos": {
+                        "x": 134.63,
+                        "y": 58.43
+                    },
+                    "uuid": "876c44fb-2231-4480-b672-f116d83a2853"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of R5",
+                    "pos": {
+                        "x": 136.0,
+                        "y": 85.0
+                    },
+                    "uuid": "92f330f5-9fbc-4180-8ff0-4d7813412508"
+                },
+                {
+                    "description": "Pad 1 [CC2] of R6 on F.Cu",
+                    "pos": {
+                        "x": 136.175,
+                        "y": 85.1
+                    },
+                    "uuid": "252d0e6e-726f-4033-8337-f433bafcc9c8"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of R6",
+                    "pos": {
+                        "x": 137.0,
+                        "y": 83.67
+                    },
+                    "uuid": "c3e73ae1-2f0f-4ca0-bc2c-1b6eccb7328f"
+                },
+                {
+                    "description": "Pad 2 [GND] of R5 on F.Cu",
+                    "pos": {
+                        "x": 136.825,
+                        "y": 83.6
+                    },
+                    "uuid": "bcacdae6-0466-4a04-8462-58cee0ac3c0a"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Circle of J5 on F.Silkscreen",
+                    "pos": {
+                        "x": 131.21,
+                        "y": 89.6
+                    },
+                    "uuid": "964524e8-79cc-4c9f-830c-3387bf83d129"
+                },
+                {
+                    "description": "PTH pad 7 [GND] of J5",
+                    "pos": {
+                        "x": 131.36,
+                        "y": 90.0
+                    },
+                    "uuid": "8b6e1690-6e5f-48f9-bcbe-9739fa00ee04"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Segment of U1 on F.Silkscreen",
+                    "pos": {
+                        "x": 152.9419,
+                        "y": 61.33
+                    },
+                    "uuid": "e49e3e38-4c05-4d63-8c43-ea271e44c7e4"
+                },
+                {
+                    "description": "Pad 5 [unconnected-(U1-VREF-Pad5)] of U1 on F.Cu",
+                    "pos": {
+                        "x": 157.3719,
+                        "y": 60.28
+                    },
+                    "uuid": "98fea84f-c7a8-4e49-bea2-c837046af07c"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Segment of U1 on F.Silkscreen",
+                    "pos": {
+                        "x": 152.9419,
+                        "y": 61.33
+                    },
+                    "uuid": "e49e3e38-4c05-4d63-8c43-ea271e44c7e4"
+                },
+                {
+                    "description": "Pad 6 [CANL] of U1 on F.Cu",
+                    "pos": {
+                        "x": 156.1019,
+                        "y": 60.28
+                    },
+                    "uuid": "cbc8f63c-dbe8-48a9-96cc-a988c66a976a"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Segment of U1 on F.Silkscreen",
+                    "pos": {
+                        "x": 152.9419,
+                        "y": 61.33
+                    },
+                    "uuid": "e49e3e38-4c05-4d63-8c43-ea271e44c7e4"
+                },
+                {
+                    "description": "Pad 7 [CANH] of U1 on F.Cu",
+                    "pos": {
+                        "x": 154.8419,
+                        "y": 60.28
+                    },
+                    "uuid": "6c8a6d92-fe3d-4c1f-b39d-7fd92d179ada"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Segment of U1 on F.Silkscreen",
+                    "pos": {
+                        "x": 152.9419,
+                        "y": 61.33
+                    },
+                    "uuid": "e49e3e38-4c05-4d63-8c43-ea271e44c7e4"
+                },
+                {
+                    "description": "Pad 8 [CAN_RS] of U1 on F.Cu",
+                    "pos": {
+                        "x": 153.5619,
+                        "y": 60.28
+                    },
+                    "uuid": "6f8e9380-8fa8-4842-995f-a5743557cada"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Segment of U1 on F.Silkscreen",
+                    "pos": {
+                        "x": 158.0019,
+                        "y": 64.37
+                    },
+                    "uuid": "e66f66f7-776a-41d4-9825-573b2eb2a127"
+                },
+                {
+                    "description": "Pad 1 [CAN_TX] of U1 on F.Cu",
+                    "pos": {
+                        "x": 153.5619,
+                        "y": 65.42
+                    },
+                    "uuid": "05dbc82d-6960-42c4-962c-b32c9dff6eb0"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Segment of U1 on F.Silkscreen",
+                    "pos": {
+                        "x": 158.0019,
+                        "y": 64.37
+                    },
+                    "uuid": "e66f66f7-776a-41d4-9825-573b2eb2a127"
+                },
+                {
+                    "description": "Pad 2 [GND] of U1 on F.Cu",
+                    "pos": {
+                        "x": 154.8419,
+                        "y": 65.42
+                    },
+                    "uuid": "50a2002c-bec1-4ae2-9700-698f2157cee3"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Segment of U1 on F.Silkscreen",
+                    "pos": {
+                        "x": 158.0019,
+                        "y": 64.37
+                    },
+                    "uuid": "e66f66f7-776a-41d4-9825-573b2eb2a127"
+                },
+                {
+                    "description": "Pad 3 [3V3] of U1 on F.Cu",
+                    "pos": {
+                        "x": 156.1019,
+                        "y": 65.42
+                    },
+                    "uuid": "5f1de808-aa57-4ce9-bef8-1296556f2ea0"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Segment of U1 on F.Silkscreen",
+                    "pos": {
+                        "x": 158.0019,
+                        "y": 64.37
+                    },
+                    "uuid": "e66f66f7-776a-41d4-9825-573b2eb2a127"
+                },
+                {
+                    "description": "Pad 4 [CAN_RX] of U1 on F.Cu",
+                    "pos": {
+                        "x": 157.3719,
+                        "y": 65.42
+                    },
+                    "uuid": "8d5f66be-d95d-4064-ac60-d34cd992768c"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Segment of J2 on F.Silkscreen",
+                    "pos": {
+                        "x": 154.0869,
+                        "y": 69.96
+                    },
+                    "uuid": "155fd664-e2e9-49c3-848a-62f77cd6fbb2"
+                },
+                {
+                    "description": "Pad 2 [GND] of C5 on F.Cu",
+                    "pos": {
+                        "x": 154.5969,
+                        "y": 70.9
+                    },
+                    "uuid": "3c3720ba-22c5-4639-bcac-4943ae444a52"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Segment of D3 on F.Silkscreen",
+                    "pos": {
+                        "x": 140.57,
+                        "y": 49.12
+                    },
+                    "uuid": "5acf9fe4-c270-402f-902b-14712b3e8dd6"
+                },
+                {
+                    "description": "Pad 2 [RP_GATE] of D3 on F.Cu",
+                    "pos": {
+                        "x": 141.5,
+                        "y": 48.86
+                    },
+                    "uuid": "d31c2e31-cfb9-4b69-99c7-8badf73c5018"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Segment of D3 on F.Silkscreen",
+                    "pos": {
+                        "x": 142.43,
+                        "y": 49.12
+                    },
+                    "uuid": "3cb5b953-f488-422c-8ee7-26e8c1115858"
+                },
+                {
+                    "description": "Pad 2 [RP_GATE] of D3 on F.Cu",
+                    "pos": {
+                        "x": 141.5,
+                        "y": 48.86
+                    },
+                    "uuid": "d31c2e31-cfb9-4b69-99c7-8badf73c5018"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Segment of J1 on F.Silkscreen",
+                    "pos": {
+                        "x": 152.5469,
+                        "y": 39.99
+                    },
+                    "uuid": "6495662a-d546-42fa-adfa-b18d3655e3ce"
+                },
+                {
+                    "description": "PTH pad [<no net>] of J1",
+                    "pos": {
+                        "x": 154.0469,
+                        "y": 40.56
+                    },
+                    "uuid": "76623c56-3b9f-4237-809c-e65006027d59"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Segment of J1 on F.Silkscreen",
+                    "pos": {
+                        "x": 152.5469,
+                        "y": 39.99
+                    },
+                    "uuid": "6495662a-d546-42fa-adfa-b18d3655e3ce"
+                },
+                {
+                    "description": "PTH pad [<no net>] of J1",
+                    "pos": {
+                        "x": 156.5869,
+                        "y": 40.56
+                    },
+                    "uuid": "ff1927c3-eee4-439d-8308-1dd647cb8457"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Segment of J1 on F.Silkscreen",
+                    "pos": {
+                        "x": 153.1769,
+                        "y": 39.99
+                    },
+                    "uuid": "897216e0-f71f-4569-8182-bfc862e7fa32"
+                },
+                {
+                    "description": "PTH pad [<no net>] of J1",
+                    "pos": {
+                        "x": 154.0469,
+                        "y": 40.56
+                    },
+                    "uuid": "76623c56-3b9f-4237-809c-e65006027d59"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Segment of J1 on F.Silkscreen",
+                    "pos": {
+                        "x": 154.9569,
+                        "y": 41.08
+                    },
+                    "uuid": "1b3720e7-af88-4d8b-b485-e1e32c3459de"
+                },
+                {
+                    "description": "PTH pad [<no net>] of J1",
+                    "pos": {
+                        "x": 154.0469,
+                        "y": 40.56
+                    },
+                    "uuid": "76623c56-3b9f-4237-809c-e65006027d59"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Segment of J1 on F.Silkscreen",
+                    "pos": {
+                        "x": 155.7169,
+                        "y": 39.99
+                    },
+                    "uuid": "fc0a4b84-4c51-440b-b8f7-a814328ca942"
+                },
+                {
+                    "description": "PTH pad [<no net>] of J1",
+                    "pos": {
+                        "x": 156.5869,
+                        "y": 40.56
+                    },
+                    "uuid": "ff1927c3-eee4-439d-8308-1dd647cb8457"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Segment of J1 on F.Silkscreen",
+                    "pos": {
+                        "x": 157.4969,
+                        "y": 41.08
+                    },
+                    "uuid": "adfb995c-ac27-4327-a335-7ef0b6a9b609"
+                },
+                {
+                    "description": "PTH pad [<no net>] of J1",
+                    "pos": {
+                        "x": 156.5869,
+                        "y": 40.56
+                    },
+                    "uuid": "ff1927c3-eee4-439d-8308-1dd647cb8457"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        }
+    ]
+}
