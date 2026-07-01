@@ -742,8 +742,6 @@ def main_clean():
     set_pos(footprints["C4"], 87.0, 34.0, 90)
     set_pos(footprints["C5"], 91.0, 36.5, 90)
 
-    set_pos(footprints["J2"], 64.0, 28.0)
-    set_pos(footprints["J3"], 69.0, 28.0)
     set_pos(footprints["J4"], 95.0, 43.0)
 
     set_pos(footprints["J5"], 84.0, 76.0)

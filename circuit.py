@@ -352,7 +352,7 @@ def build_circuit():
         jp3,
         "Optional bridge from onboard 3V3 to Pico-facing 3.3V header pins; open by default for backfeed protection.",
         group="Pico power and logic headers",
-        placement="Place beside J2/J3/J4 3V3 pins and silk label OPEN=NO BACKFEED.",
+        placement="Place beside J4 3V3 pin and silk label OPEN=NO BACKFEED.",
     )
     v3v3 += jp3[1]
     pico_3v3 += jp3[2]
@@ -373,44 +373,6 @@ def build_circuit():
     )
     canh += j1[1]
     canl += j1[2]
-
-    j2 = Part(
-        "Library",
-        "705430002",
-        value="CTX 3V3 GND TX",
-        ref="J2",
-        footprint="Library:CONN-TH_705430002",
-    )
-    j2.lcsc = "C504828"
-    j2.info = "3-pin 2.54mm CTX header carrying isolated PICO_3V3, GND, and CAN_TX for Pico GP4 transmit wiring. PICO_3V3 is not tied to onboard 3V3 unless JP3 is bridged."
-    design_intent(
-        j2,
-        "3-pin CTX header: isolated PICO_3V3, GND, and CAN_TX for a Pico 2 W GP4 transmit jumper.",
-        group="CAN transceiver and probe headers",
-        placement="Place next to J3/J4 and silk label pins P3V3, GND, TX.",
-    )
-    pico_3v3 += j2[1]
-    gnd += j2[2]
-    can_tx += j2[3]
-
-    j3 = Part(
-        "Library",
-        "705430002",
-        value="CRX 3V3 GND RX",
-        ref="J3",
-        footprint="Library:CONN-TH_705430002",
-    )
-    j3.lcsc = "C504828"
-    j3.info = "3-pin 2.54mm CRX header carrying isolated PICO_3V3, GND, and CAN_RX for Pico GP5 receive wiring. PICO_3V3 is not tied to onboard 3V3 unless JP3 is bridged."
-    design_intent(
-        j3,
-        "3-pin CRX header: isolated PICO_3V3, GND, and CAN_RX for a Pico 2 W GP5 receive jumper.",
-        group="CAN transceiver and probe headers",
-        placement="Place next to J2/J4 and silk label pins P3V3, GND, RX.",
-    )
-    pico_3v3 += j3[1]
-    gnd += j3[2]
-    can_rx += j3[3]
 
     j4 = Part(
         "Library",

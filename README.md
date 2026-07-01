@@ -55,7 +55,7 @@ Leave **open** when connected to the Mazda factory MS-CAN bus — it is already 
 
 ## JP3 — Pico 3V3 isolation
 
-Leave **open** by default. J2/J3/J4 3.3V pins are on `PICO_3V3`, isolated from the onboard AMS1117 `3V3` rail unless JP3 is bridged. This prevents the Pico regulator and onboard regulator from backfeeding each other. Bridge JP3 only when you intentionally want one selected 3.3V source to power both sides.
+Leave **open** by default. J4's 3.3V pin is on `PICO_3V3`, isolated from the onboard AMS1117 `3V3` rail unless JP3 is bridged. This prevents the Pico regulator and onboard regulator from backfeeding each other. Bridge JP3 only when you intentionally want one selected 3.3V source to power both sides.
 
 ## USB-C power limitation
 
