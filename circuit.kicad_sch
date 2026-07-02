@@ -3965,190 +3965,121 @@
 			)
 			(embedded_fonts no)
 		)
-	)
-	(rectangle
-		(start 232.41 20.32)
-		(end 308.61 86.36)
-		(stroke
-			(width 0.1)
-			(type dash)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "1795241b-d016-4601-aff0-6798dd8bbe9f")
-	)
-	(rectangle
-		(start 190.5 20.32)
-		(end 219.71 57.15)
-		(stroke
-			(width 0.1)
-			(type dash)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "429f31d2-bfc8-4bdb-8a82-2057ad425072")
-	)
-	(rectangle
-		(start 20.32 20.32)
-		(end 106.68 50.8)
-		(stroke
-			(width 0.1)
-			(type dash)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "59774ac2-6abc-4c23-99cc-db88dec8ec5c")
-	)
-	(rectangle
-		(start 20.32 55.88)
-		(end 100.33 95.25)
-		(stroke
-			(width 0.1)
-			(type dash)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "6ae0cdb8-717f-43c6-87ad-5c3dc8dd1925")
-	)
-	(rectangle
-		(start 494.03 20.32)
-		(end 514.35 154.94)
-		(stroke
-			(width 0.1)
-			(type dash)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "72309515-310a-4656-bb0d-00cff2c5b754")
-	)
-	(rectangle
-		(start 457.2 20.32)
-		(end 481.33 227.33)
-		(stroke
-			(width 0.1)
-			(type dash)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "93b288b5-139d-4d4d-9963-098fe5075935")
-	)
-	(rectangle
-		(start 321.31 20.32)
-		(end 444.5 82.55)
-		(stroke
-			(width 0.1)
-			(type dash)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "ad3b1bc8-5464-45c6-9e24-91202755e685")
-	)
-	(rectangle
-		(start 527.05 20.32)
-		(end 546.1 93.98)
-		(stroke
-			(width 0.1)
-			(type dash)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "c8463060-a2ce-427c-b56c-fcee6d58f208")
-	)
-	(text "CAN transceiver interface"
-		(exclude_from_sim no)
-		(at 306.07 85.09 0)
-		(effects
-			(font
-				(size 1.27 1.27)
+		(symbol "power:PWR_FLAG"
+			(power global)
+			(pin_numbers
+				(hide yes)
 			)
-			(justify right bottom)
-		)
-		(uuid "0c6f8a6a-2fc9-484d-a2f8-9689d4a53d7e")
-	)
-	(text "12V input protection"
-		(exclude_from_sim no)
-		(at 87.63 49.022 0)
-		(effects
-			(font
-				(size 1.27 1.27)
+			(pin_names
+				(offset 0)
+				(hide yes)
 			)
-			(justify right bottom)
-		)
-		(uuid "31a87fdb-47f1-4376-a7b9-3dc217172b86")
-	)
-	(text "Pico USB/header power"
-		(exclude_from_sim no)
-		(at 443.23 81.28 0)
-		(effects
-			(font
-				(size 1.27 1.27)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#FLG"
+				(at 0 1.905 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
 			)
-			(justify right bottom)
-		)
-		(uuid "32e25441-c23f-4d99-9aed-b3afcb2d3659")
-	)
-	(text "3V3 power indicator"
-		(exclude_from_sim no)
-		(at 218.44 55.88 0)
-		(effects
-			(font
-				(size 1.27 1.27)
+			(property "Value" "PWR_FLAG"
+				(at 0 3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
 			)
-			(justify right bottom)
-		)
-		(uuid "34900176-a6a9-4959-9ccb-bbd291acdd47")
-	)
-	(text "Metra 16-pin pads"
-		(exclude_from_sim no)
-		(at 513.08 153.67 0)
-		(effects
-			(font
-				(size 1.27 1.27)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
 			)
-			(justify right bottom)
-		)
-		(uuid "97e93a02-35fd-474e-9153-c7bf76b6ce8e")
-	)
-	(text "3.3V regulator"
-		(exclude_from_sim no)
-		(at 92.71 93.98 0)
-		(effects
-			(font
-				(size 1.27 1.27)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
 			)
-			(justify right bottom)
-		)
-		(uuid "9fd4d6a9-65c8-4ead-a099-20a366634757")
-	)
-	(text "Metra 24-pin pads"
-		(exclude_from_sim no)
-		(at 480.06 226.06 0)
-		(effects
-			(font
-				(size 1.27 1.27)
+			(property "Description" "Special symbol for telling ERC where power comes from"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
 			)
-			(justify right bottom)
-		)
-		(uuid "b31838de-57bf-4f5d-8b70-403f01f833de")
-	)
-	(text "Utility probe pads"
-		(exclude_from_sim no)
-		(at 544.83 91.44 0)
-		(effects
-			(font
-				(size 1.27 1.27)
+			(property "ki_keywords" "flag power"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
 			)
-			(justify right bottom)
+			(symbol "PWR_FLAG_0_0"
+				(pin power_out line
+					(at 0 0 90)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "PWR_FLAG_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(embedded_fonts no)
 		)
-		(uuid "e796a3ae-a4b2-48ab-9652-5ff0f9904e81")
 	)
 	(junction
 		(at 55.88 31.75)
@@ -5118,6 +5049,190 @@
 		)
 		(uuid "f7b1eb15-86c2-42a2-bed9-a95a1bed7555")
 	)
+	(text "CAN transceiver interface"
+		(exclude_from_sim no)
+		(at 306.07 85.09 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "0c6f8a6a-2fc9-484d-a2f8-9689d4a53d7e")
+	)
+	(text "12V input protection"
+		(exclude_from_sim no)
+		(at 87.63 49.022 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "31a87fdb-47f1-4376-a7b9-3dc217172b86")
+	)
+	(text "Pico USB/header power"
+		(exclude_from_sim no)
+		(at 443.23 81.28 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "32e25441-c23f-4d99-9aed-b3afcb2d3659")
+	)
+	(text "3V3 power indicator"
+		(exclude_from_sim no)
+		(at 218.44 55.88 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "34900176-a6a9-4959-9ccb-bbd291acdd47")
+	)
+	(text "Metra 16-pin pads"
+		(exclude_from_sim no)
+		(at 513.08 153.67 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "97e93a02-35fd-474e-9153-c7bf76b6ce8e")
+	)
+	(text "3.3V regulator"
+		(exclude_from_sim no)
+		(at 92.71 93.98 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "9fd4d6a9-65c8-4ead-a099-20a366634757")
+	)
+	(text "Metra 24-pin pads"
+		(exclude_from_sim no)
+		(at 480.06 226.06 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "b31838de-57bf-4f5d-8b70-403f01f833de")
+	)
+	(text "Utility probe pads"
+		(exclude_from_sim no)
+		(at 544.83 91.44 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "e796a3ae-a4b2-48ab-9652-5ff0f9904e81")
+	)
+	(rectangle
+		(start 232.41 20.32)
+		(end 308.61 86.36)
+		(stroke
+			(width 0.1)
+			(type dash)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "1795241b-d016-4601-aff0-6798dd8bbe9f")
+	)
+	(rectangle
+		(start 190.5 20.32)
+		(end 219.71 57.15)
+		(stroke
+			(width 0.1)
+			(type dash)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "429f31d2-bfc8-4bdb-8a82-2057ad425072")
+	)
+	(rectangle
+		(start 20.32 20.32)
+		(end 106.68 50.8)
+		(stroke
+			(width 0.1)
+			(type dash)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "59774ac2-6abc-4c23-99cc-db88dec8ec5c")
+	)
+	(rectangle
+		(start 20.32 55.88)
+		(end 100.33 95.25)
+		(stroke
+			(width 0.1)
+			(type dash)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "6ae0cdb8-717f-43c6-87ad-5c3dc8dd1925")
+	)
+	(rectangle
+		(start 494.03 20.32)
+		(end 514.35 154.94)
+		(stroke
+			(width 0.1)
+			(type dash)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "72309515-310a-4656-bb0d-00cff2c5b754")
+	)
+	(rectangle
+		(start 457.2 20.32)
+		(end 481.33 227.33)
+		(stroke
+			(width 0.1)
+			(type dash)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "93b288b5-139d-4d4d-9963-098fe5075935")
+	)
+	(rectangle
+		(start 321.31 20.32)
+		(end 444.5 82.55)
+		(stroke
+			(width 0.1)
+			(type dash)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "ad3b1bc8-5464-45c6-9e24-91202755e685")
+	)
+	(rectangle
+		(start 527.05 20.32)
+		(end 546.1 93.98)
+		(stroke
+			(width 0.1)
+			(type dash)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "c8463060-a2ce-427c-b56c-fcee6d58f208")
+	)
 	(symbol
 		(lib_id "Library:MMSZ5245BT1G")
 		(at 77.47 33.02 270)
@@ -5154,9 +5269,9 @@
 		)
 		(property "Footprint" "Library:SOD-123_L2.7-W1.6-LS3.7-RD"
 			(at 77.47 33.02 270)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5165,9 +5280,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 77.47 33.02 270)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5186,9 +5301,9 @@
 		)
 		(property "LCSC Part" "C129730"
 			(at 3.81 1.27 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5252,9 +5367,9 @@
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.5mm_Drill1.2mm"
 			(at 499.11 123.19 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5263,9 +5378,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 499.11 123.19 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5284,9 +5399,9 @@
 		)
 		(property "LCSC Part" "NONE"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5325,9 +5440,9 @@
 		(uuid "06fcd99d-1e13-4e0e-b20a-c521b0853a51")
 		(property "Reference" "#PWR26"
 			(at 391.16 45.72 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5356,9 +5471,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 391.16 43.18 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5427,9 +5542,9 @@
 		)
 		(property "Footprint" "Library:SOIC-8_L4.9-W3.9-P1.27-LS6.0-BL"
 			(at 257.81 52.07 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5438,9 +5553,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 257.81 52.07 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5459,9 +5574,9 @@
 		)
 		(property "LCSC Part" "C12084"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5543,9 +5658,9 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 237.49 34.29 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5554,9 +5669,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 237.49 34.29 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5575,9 +5690,9 @@
 		)
 		(property "LCSC Part" "NONE"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5619,9 +5734,9 @@
 		(uuid "09755ee7-c537-47e8-9246-069e716eae2f")
 		(property "Reference" "#PWR20"
 			(at 248.92 40.64 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5650,9 +5765,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 248.92 38.1 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5701,9 +5816,9 @@
 		(uuid "0b4784a8-559f-468b-8a9e-0b937f198537")
 		(property "Reference" "#PWR19"
 			(at 237.49 41.91 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5732,9 +5847,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 237.49 39.37 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5803,9 +5918,9 @@
 		)
 		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
 			(at 209.55 40.64 180)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5814,9 +5929,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 209.55 40.64 180)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5835,9 +5950,9 @@
 		)
 		(property "LCSC Part" "C20433785"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5879,9 +5994,9 @@
 		(uuid "0cd5ce8d-89e7-4315-b5cb-2b937c09d6d7")
 		(property "Reference" "#PWR45"
 			(at 463.55 33.02 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5910,9 +6025,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 463.55 30.48 180)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5983,9 +6098,9 @@
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.5mm_Drill1.2mm"
 			(at 463.55 140.97 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5994,9 +6109,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 463.55 140.97 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6015,9 +6130,9 @@
 		)
 		(property "LCSC Part" "NONE"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6076,9 +6191,9 @@
 		)
 		(property "Footprint" "Library:HDR-TH_10P-P2.54-V-M-R2-C5-S2.54"
 			(at 425.45 54.61 180)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6087,9 +6202,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 425.45 54.61 180)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6108,9 +6223,9 @@
 		)
 		(property "LCSC Part" "C586266"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6176,9 +6291,9 @@
 		(uuid "1bff98cb-238e-4746-8c11-39c7ed28f176")
 		(property "Reference" "#PWR44"
 			(at 463.55 40.64 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6207,9 +6322,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 463.55 38.1 180)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6258,9 +6373,9 @@
 		(uuid "1e750348-3d63-4b91-a37e-22b78afc6f0c")
 		(property "Reference" "#PWR15"
 			(at 214.63 43.18 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6289,9 +6404,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 214.63 40.64 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6340,9 +6455,9 @@
 		(uuid "1e78a3da-1d0c-4849-b01e-fbd0a23badf7")
 		(property "Reference" "#PWR43"
 			(at 463.55 44.45 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6371,9 +6486,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 463.55 48.26 180)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6444,9 +6559,9 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 391.16 38.1 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6455,9 +6570,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 391.16 38.1 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6476,9 +6591,9 @@
 		)
 		(property "LCSC Part" "NONE"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6542,9 +6657,9 @@
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.5mm_Drill1.2mm"
 			(at 463.55 27.94 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6553,9 +6668,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 463.55 27.94 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6574,9 +6689,9 @@
 		)
 		(property "LCSC Part" "NONE"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6637,9 +6752,9 @@
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.5mm_Drill1.2mm"
 			(at 499.11 87.63 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6648,9 +6763,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 499.11 87.63 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6669,9 +6784,9 @@
 		)
 		(property "LCSC Part" "NONE"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6731,9 +6846,9 @@
 		)
 		(property "Footprint" "Library:SOT-23-3_L2.9-W1.3-P1.90-LS2.3-BR"
 			(at 60.96 31.75 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6742,9 +6857,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 60.96 31.75 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6763,9 +6878,9 @@
 		)
 		(property "LCSC Part" "C3290636"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6832,9 +6947,9 @@
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.5mm_Drill1.2mm"
 			(at 499.11 107.95 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6843,9 +6958,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 499.11 107.95 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6864,9 +6979,9 @@
 		)
 		(property "LCSC Part" "NONE"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6905,9 +7020,9 @@
 		(uuid "2e6f1eeb-e14f-475e-a77b-1b23cad14a43")
 		(property "Reference" "#PWR1"
 			(at 90.17 43.18 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6937,9 +7052,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 90.17 39.37 180)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7010,9 +7125,9 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 375.92 58.42 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7021,9 +7136,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 375.92 58.42 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7042,9 +7157,9 @@
 		)
 		(property "LCSC Part" "NONE"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7108,9 +7223,9 @@
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm"
 			(at 533.4 27.94 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7119,9 +7234,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 533.4 27.94 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7140,9 +7255,9 @@
 		)
 		(property "LCSC Part" "NONE"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7201,9 +7316,9 @@
 		)
 		(property "Footprint" "Library:SOD-523_L1.2-W0.8-LS1.6-RD"
 			(at 379.73 44.45 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7212,9 +7327,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 379.73 44.45 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7233,9 +7348,9 @@
 		)
 		(property "LCSC Part" "C477993"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7277,9 +7392,9 @@
 		(uuid "32e00733-efbe-4b6b-a752-f051429756b2")
 		(property "Reference" "#PWR16"
 			(at 198.12 24.13 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7308,9 +7423,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 198.12 27.94 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7381,9 +7496,9 @@
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.5mm_Drill1.2mm"
 			(at 499.11 74.93 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7392,9 +7507,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 499.11 74.93 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7413,9 +7528,9 @@
 		)
 		(property "LCSC Part" "NONE"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7476,9 +7591,9 @@
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.5mm_Drill1.2mm"
 			(at 499.11 27.94 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7487,9 +7602,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 499.11 27.94 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7508,9 +7623,9 @@
 		)
 		(property "LCSC Part" "NONE"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7571,9 +7686,9 @@
 		)
 		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm"
 			(at 406.4 49.53 90)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7582,9 +7697,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 406.4 49.53 90)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7603,9 +7718,9 @@
 		)
 		(property "LCSC Part" "NONE"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7666,9 +7781,9 @@
 		)
 		(property "Footprint" "Jumper:SolderJumper-3_P2.0mm_Open_TrianglePad1.0x1.5mm"
 			(at 34.29 35.56 180)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7677,9 +7792,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 34.29 35.56 180)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7698,9 +7813,9 @@
 		)
 		(property "LCSC Part" "NONE"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7745,9 +7860,9 @@
 		(uuid "4056c7b5-4bf9-4baa-8fd9-159302caa23d")
 		(property "Reference" "#PWR11"
 			(at 77.47 62.23 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7777,9 +7892,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 77.47 66.04 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7849,9 +7964,9 @@
 		)
 		(property "Footprint" "Capacitor_Tantalum_SMD:CP_EIA-3528-21_Kemet-B_HandSolder"
 			(at 77.47 73.66 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7860,9 +7975,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 77.47 73.66 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7881,9 +7996,9 @@
 		)
 		(property "LCSC Part" "NONE"
 			(at -78.74 35.56 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7947,9 +8062,9 @@
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.5mm_Drill1.2mm"
 			(at 499.11 60.96 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7958,9 +8073,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 499.11 60.96 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7979,9 +8094,9 @@
 		)
 		(property "LCSC Part" "NONE"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8042,9 +8157,9 @@
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.5mm_Drill1.2mm"
 			(at 463.55 35.56 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8053,9 +8168,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 463.55 35.56 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8074,9 +8189,9 @@
 		)
 		(property "LCSC Part" "NONE"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8137,9 +8252,9 @@
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.5mm_Drill1.2mm"
 			(at 499.11 93.98 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8148,9 +8263,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 499.11 93.98 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8169,9 +8284,9 @@
 		)
 		(property "LCSC Part" "NONE"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8232,9 +8347,9 @@
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.5mm_Drill1.2mm"
 			(at 463.55 162.56 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8243,9 +8358,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 463.55 162.56 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8264,9 +8379,9 @@
 		)
 		(property "LCSC Part" "NONE"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8327,9 +8442,9 @@
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.5mm_Drill1.2mm"
 			(at 463.55 132.08 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8338,9 +8453,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 463.55 132.08 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8359,9 +8474,9 @@
 		)
 		(property "LCSC Part" "NONE"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8400,9 +8515,9 @@
 		(uuid "4aed02ea-d03d-4452-82a4-07f6ce8e9f1f")
 		(property "Reference" "#PWR24"
 			(at 248.92 24.13 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8431,9 +8546,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 248.92 27.94 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8482,9 +8597,9 @@
 		(uuid "4b8602a4-4a02-4c14-bd19-475317634ee1")
 		(property "Reference" "#PWR40"
 			(at 377.19 26.67 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8513,9 +8628,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 377.19 30.48 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8586,9 +8701,9 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 365.76 58.42 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8597,9 +8712,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 365.76 58.42 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8618,9 +8733,9 @@
 		)
 		(property "LCSC Part" "NONE"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8684,9 +8799,9 @@
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.5mm_Drill1.2mm"
 			(at 463.55 100.33 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8695,9 +8810,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 463.55 100.33 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8716,9 +8831,9 @@
 		)
 		(property "LCSC Part" "NONE"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8757,9 +8872,9 @@
 		(uuid "507235eb-8d0c-408e-96d1-f948475cf852")
 		(property "Reference" "#PWR22"
 			(at 245.11 53.34 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8788,9 +8903,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 245.11 50.8 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8839,9 +8954,9 @@
 		(uuid "50a2a5be-a81a-45f0-9edf-7ef77591eafa")
 		(property "Reference" "#PWR21"
 			(at 251.46 72.39 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8870,9 +8985,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 251.46 69.85 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8920,9 +9035,9 @@
 		(uuid "51aadabf-cc45-449f-a5dc-e6d519d1d910")
 		(property "Reference" "#PWR4"
 			(at 41.91 31.75 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8951,9 +9066,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 41.91 35.56 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9002,9 +9117,9 @@
 		(uuid "5245e7ef-3b1f-4ffb-ae86-e444e881611f")
 		(property "Reference" "#PWR7"
 			(at 24.13 77.47 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9033,9 +9148,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 24.13 74.93 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9084,9 +9199,9 @@
 		(uuid "5628396d-69c1-41d9-9755-f65faadd7a44")
 		(property "Reference" "#PWR47"
 			(at 533.4 26.67 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9115,9 +9230,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 533.4 30.48 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9186,9 +9301,9 @@
 		)
 		(property "Footprint" "Library:CONN-TH_2P-P2.54_1725656"
 			(at 293.37 41.91 180)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9197,9 +9312,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 293.37 41.91 180)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9218,9 +9333,9 @@
 		)
 		(property "LCSC Part" "C3029316"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9284,9 +9399,9 @@
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.5mm_Drill1.2mm"
 			(at 463.55 177.8 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9295,9 +9410,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 463.55 177.8 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9316,9 +9431,9 @@
 		)
 		(property "LCSC Part" "NONE"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9379,9 +9494,9 @@
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.5mm_Drill1.2mm"
 			(at 499.11 140.97 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9390,9 +9505,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 499.11 140.97 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9411,9 +9526,9 @@
 		)
 		(property "LCSC Part" "NONE"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9474,9 +9589,9 @@
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.5mm_Drill1.2mm"
 			(at 499.11 52.07 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9485,9 +9600,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 499.11 52.07 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9506,9 +9621,9 @@
 		)
 		(property "LCSC Part" "NONE"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9569,9 +9684,9 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 251.46 64.77 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9580,9 +9695,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 251.46 64.77 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9601,9 +9716,9 @@
 		)
 		(property "LCSC Part" "NONE"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9666,9 +9781,9 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
 			(at 24.13 69.85 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9677,9 +9792,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 24.13 69.85 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9698,9 +9813,9 @@
 		)
 		(property "LCSC Part" "NONE"
 			(at -85.09 35.56 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9764,9 +9879,9 @@
 		)
 		(property "Footprint" "Library:SMB_L4.6-W3.6-LS5.3-RD"
 			(at 90.17 31.75 270)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9775,9 +9890,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 90.17 31.75 270)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9796,9 +9911,9 @@
 		)
 		(property "LCSC Part" "C83846"
 			(at 7.62 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9839,9 +9954,9 @@
 		(uuid "73d14690-9a97-44be-82ae-ba01e8dafaf6")
 		(property "Reference" "#PWR10"
 			(at 27.94 59.69 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9870,9 +9985,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 30.48 59.69 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9920,9 +10035,9 @@
 		(uuid "757b1419-41c7-40ec-be5f-788c92dc06e1")
 		(property "Reference" "#PWR13"
 			(at 26.67 68.58 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9951,9 +10066,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 30.48 68.58 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10024,9 +10139,9 @@
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.5mm_Drill1.2mm"
 			(at 463.55 45.72 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10035,9 +10150,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 463.55 45.72 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10056,9 +10171,9 @@
 		)
 		(property "LCSC Part" "NONE"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10097,9 +10212,9 @@
 		(uuid "788d172d-7f04-45de-8707-58cec9152224")
 		(property "Reference" "#PWR31"
 			(at 351.79 53.34 90)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10130,9 +10245,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 350.52 54.61 90)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10181,9 +10296,9 @@
 		(uuid "7899136b-f193-44e5-a31d-754ae2647a41")
 		(property "Reference" "#PWR34"
 			(at 375.92 66.04 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10212,9 +10327,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 375.92 63.5 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10285,9 +10400,9 @@
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm"
 			(at 537.21 68.58 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10296,9 +10411,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 537.21 68.58 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10317,9 +10432,9 @@
 		)
 		(property "LCSC Part" "NONE"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10357,9 +10472,9 @@
 		(uuid "7bfffc81-ccec-421f-a52c-af02c2144003")
 		(property "Reference" "#PWR5"
 			(at 34.29 25.4 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10388,9 +10503,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 34.29 29.21 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10461,9 +10576,9 @@
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.5mm_Drill1.2mm"
 			(at 463.55 187.96 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10472,9 +10587,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 463.55 187.96 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10493,9 +10608,9 @@
 		)
 		(property "LCSC Part" "NONE"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10534,9 +10649,9 @@
 		(uuid "8229a497-6c58-4a16-8ac1-ebf0e61b91ee")
 		(property "Reference" "#PWR8"
 			(at 77.47 81.28 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10565,9 +10680,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 77.47 78.74 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10615,9 +10730,9 @@
 		(uuid "826e195b-a225-4990-ab1c-f39c873136a1")
 		(property "Reference" "#PWR6"
 			(at 63.5 21.59 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10647,9 +10762,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 63.5 24.13 180)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10718,9 +10833,9 @@
 		)
 		(property "Footprint" "Library:TYPE-C-SMD_TYPE-C-6P_USB4125-GF-A-0190"
 			(at 339.09 60.96 180)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10729,9 +10844,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 339.09 60.96 180)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10750,9 +10865,9 @@
 		)
 		(property "LCSC Part" "C3197922"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10809,9 +10924,9 @@
 		(uuid "86a91f26-207f-4a01-9d46-e752eac0a0c1")
 		(property "Reference" "#PWR32"
 			(at 351.79 66.04 90)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10842,9 +10957,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 350.52 67.31 90)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10913,9 +11028,9 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 382.27 30.48 90)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10924,9 +11039,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 382.27 30.48 90)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10945,9 +11060,9 @@
 		)
 		(property "LCSC Part" "C404396"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11011,9 +11126,9 @@
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.5mm_Drill1.2mm"
 			(at 463.55 93.98 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11022,9 +11137,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 463.55 93.98 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11043,9 +11158,9 @@
 		)
 		(property "LCSC Part" "NONE"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11084,9 +11199,9 @@
 		(uuid "90525867-33c8-49c4-af12-8e5a38cc5b57")
 		(property "Reference" "#PWR28"
 			(at 415.29 55.88 90)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11117,9 +11232,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 416.56 57.15 270)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11190,9 +11305,9 @@
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.5mm_Drill1.2mm"
 			(at 463.55 85.09 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11201,9 +11316,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 463.55 85.09 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11222,9 +11337,9 @@
 		)
 		(property "LCSC Part" "NONE"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11285,9 +11400,9 @@
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.5mm_Drill1.2mm"
 			(at 463.55 109.22 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11296,9 +11411,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 463.55 109.22 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11317,9 +11432,9 @@
 		)
 		(property "LCSC Part" "NONE"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11380,9 +11495,9 @@
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm"
 			(at 533.4 58.42 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11391,9 +11506,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 533.4 58.42 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11412,9 +11527,9 @@
 		)
 		(property "LCSC Part" "NONE"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11475,9 +11590,9 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 276.86 40.64 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11486,9 +11601,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 276.86 40.64 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11507,9 +11622,9 @@
 		)
 		(property "LCSC Part" "NONE"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11551,9 +11666,9 @@
 		(uuid "975844d4-4fb3-4eab-8659-ca05f739ca4e")
 		(property "Reference" "#PWR33"
 			(at 365.76 66.04 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11582,9 +11697,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 365.76 63.5 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11642,7 +11757,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "820Ω"
+		(property "Value" "10kΩ"
 			(at 52.07 39.37 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11655,9 +11770,9 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 50.8 38.1 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11666,9 +11781,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 50.8 38.1 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11687,9 +11802,9 @@
 		)
 		(property "LCSC Part" "NONE"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11753,9 +11868,9 @@
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.5mm_Drill1.2mm"
 			(at 463.55 171.45 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11764,9 +11879,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 463.55 171.45 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11785,9 +11900,9 @@
 		)
 		(property "LCSC Part" "NONE"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11848,9 +11963,9 @@
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.5mm_Drill1.2mm"
 			(at 499.11 116.84 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11859,9 +11974,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 499.11 116.84 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11880,9 +11995,9 @@
 		)
 		(property "LCSC Part" "NONE"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11943,9 +12058,9 @@
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.5mm_Drill1.2mm"
 			(at 463.55 53.34 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11954,9 +12069,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 463.55 53.34 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11975,9 +12090,9 @@
 		)
 		(property "LCSC Part" "NONE"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12038,9 +12153,9 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 85.09 72.39 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12049,9 +12164,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 85.09 72.39 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12070,9 +12185,9 @@
 		)
 		(property "LCSC Part" "NONE"
 			(at -78.74 35.56 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12114,9 +12229,9 @@
 		(uuid "a5a7c890-db97-48f3-9718-49d1bd69f4e9")
 		(property "Reference" "#PWR25"
 			(at 245.11 49.53 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12145,9 +12260,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 245.11 53.34 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12218,9 +12333,9 @@
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.5mm_Drill1.2mm"
 			(at 463.55 63.5 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12229,9 +12344,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 463.55 63.5 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12250,9 +12365,9 @@
 		)
 		(property "LCSC Part" "NONE"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12313,9 +12428,9 @@
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.5mm_Drill1.2mm"
 			(at 463.55 205.74 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12324,9 +12439,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 463.55 205.74 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12345,9 +12460,9 @@
 		)
 		(property "LCSC Part" "NONE"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12408,9 +12523,9 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 198.12 33.02 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12419,9 +12534,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 198.12 33.02 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12440,9 +12555,9 @@
 		)
 		(property "LCSC Part" "NONE"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12506,9 +12621,9 @@
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.5mm_Drill1.2mm"
 			(at 463.55 69.85 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12517,9 +12632,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 463.55 69.85 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12538,9 +12653,9 @@
 		)
 		(property "LCSC Part" "NONE"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12601,9 +12716,9 @@
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.5mm_Drill1.2mm"
 			(at 499.11 68.58 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12612,9 +12727,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 499.11 68.58 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12633,9 +12748,9 @@
 		)
 		(property "LCSC Part" "NONE"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12696,9 +12811,9 @@
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.5mm_Drill1.2mm"
 			(at 499.11 133.35 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12707,9 +12822,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 499.11 133.35 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12728,9 +12843,9 @@
 		)
 		(property "LCSC Part" "NONE"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12791,9 +12906,9 @@
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.5mm_Drill1.2mm"
 			(at 463.55 147.32 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12802,9 +12917,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 463.55 147.32 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12823,9 +12938,9 @@
 		)
 		(property "LCSC Part" "NONE"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12886,9 +13001,9 @@
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.5mm_Drill1.2mm"
 			(at 463.55 195.58 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12897,9 +13012,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 463.55 195.58 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12918,9 +13033,9 @@
 		)
 		(property "LCSC Part" "NONE"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12959,9 +13074,9 @@
 		(uuid "bcfb40e3-242b-462b-98c3-def63b621db0")
 		(property "Reference" "#PWR17"
 			(at 204.47 43.18 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12990,9 +13105,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 204.47 40.64 180)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13041,9 +13156,9 @@
 		(uuid "bf2d70d0-4f57-4255-ac36-e94fa88fdad6")
 		(property "Reference" "#PWR46"
 			(at 533.4 57.15 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13072,9 +13187,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 533.4 60.96 180)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13123,9 +13238,9 @@
 		(uuid "c2e7fce4-8e40-4cc2-a7cd-bb081020e8eb")
 		(property "Reference" "#PWR23"
 			(at 237.49 25.4 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13154,9 +13269,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 237.49 29.21 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13227,9 +13342,9 @@
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.5mm_Drill1.2mm"
 			(at 499.11 81.28 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13238,9 +13353,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 499.11 81.28 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13259,9 +13374,9 @@
 		)
 		(property "LCSC Part" "NONE"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13322,9 +13437,9 @@
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.5mm_Drill1.2mm"
 			(at 499.11 100.33 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13333,9 +13448,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 499.11 100.33 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13354,9 +13469,9 @@
 		)
 		(property "LCSC Part" "NONE"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13417,9 +13532,9 @@
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.5mm_Drill1.2mm"
 			(at 463.55 156.21 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13428,9 +13543,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 463.55 156.21 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13449,9 +13564,9 @@
 		)
 		(property "LCSC Part" "NONE"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13490,9 +13605,9 @@
 		(uuid "d8b1b857-83eb-47b4-a31e-89cd3ccf4e00")
 		(property "Reference" "#PWR2"
 			(at 50.8 45.72 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13521,9 +13636,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 50.8 43.18 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13594,9 +13709,9 @@
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.5mm_Drill1.2mm"
 			(at 463.55 125.73 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13605,9 +13720,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 463.55 125.73 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13626,9 +13741,9 @@
 		)
 		(property "LCSC Part" "NONE"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13689,9 +13804,9 @@
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm"
 			(at 537.21 48.26 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13700,9 +13815,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 537.21 48.26 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13721,9 +13836,9 @@
 		)
 		(property "LCSC Part" "NONE"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13784,9 +13899,9 @@
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.5mm_Drill1.2mm"
 			(at 463.55 78.74 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13795,9 +13910,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 463.55 78.74 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13816,9 +13931,9 @@
 		)
 		(property "LCSC Part" "NONE"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13857,9 +13972,9 @@
 		(uuid "db98eeee-5978-43bc-aa17-d71433722aad")
 		(property "Reference" "#PWR48"
 			(at 533.4 36.83 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13888,9 +14003,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 533.4 40.64 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13939,9 +14054,9 @@
 		(uuid "ddeb753d-7163-4948-9c59-a43fab8c8dde")
 		(property "Reference" "#PWR42"
 			(at 351.79 63.5 90)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13972,9 +14087,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 350.52 64.77 270)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14045,9 +14160,9 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 248.92 33.02 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14056,9 +14171,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 248.92 33.02 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14077,9 +14192,9 @@
 		)
 		(property "LCSC Part" "NONE"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14143,9 +14258,9 @@
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.5mm_Drill1.2mm"
 			(at 463.55 115.57 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14154,9 +14269,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 463.55 115.57 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14175,9 +14290,9 @@
 		)
 		(property "LCSC Part" "NONE"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14238,9 +14353,9 @@
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm"
 			(at 537.21 78.74 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14249,9 +14364,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 537.21 78.74 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14270,9 +14385,9 @@
 		)
 		(property "LCSC Part" "NONE"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14311,9 +14426,9 @@
 		(uuid "e7c051c7-38d4-40cf-8b73-ab66dd155cdc")
 		(property "Reference" "#PWR14"
 			(at 71.12 68.58 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14343,9 +14458,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 67.31 68.58 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14416,9 +14531,9 @@
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.5mm_Drill1.2mm"
 			(at 463.55 213.36 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14427,9 +14542,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 463.55 213.36 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14448,9 +14563,9 @@
 		)
 		(property "LCSC Part" "NONE"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14489,9 +14604,9 @@
 		(uuid "e93c037f-949a-4033-8eb5-44830cd9e763")
 		(property "Reference" "#PWR36"
 			(at 391.16 29.21 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14520,9 +14635,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 391.16 33.02 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14593,9 +14708,9 @@
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.5mm_Drill1.2mm"
 			(at 499.11 35.56 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14604,9 +14719,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 499.11 35.56 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14625,9 +14740,9 @@
 		)
 		(property "LCSC Part" "NONE"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14688,9 +14803,9 @@
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.5mm_Drill1.2mm"
 			(at 499.11 45.72 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14699,9 +14814,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 499.11 45.72 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14720,9 +14835,9 @@
 		)
 		(property "LCSC Part" "NONE"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14761,9 +14876,9 @@
 		(uuid "ee6db03a-6729-46eb-841e-810cda7729bd")
 		(property "Reference" "#PWR30"
 			(at 326.39 63.5 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14792,9 +14907,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 326.39 60.96 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14842,9 +14957,9 @@
 		(uuid "f1a2130b-c4e5-4c86-bdd6-ec3dca2f0bd8")
 		(property "Reference" "#PWR3"
 			(at 26.67 31.75 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14873,9 +14988,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 26.67 35.56 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14924,9 +15039,9 @@
 		(uuid "f3052706-8564-433c-8fbe-f1b64ab535b0")
 		(property "Reference" "#PWR41"
 			(at 351.79 55.88 90)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14957,9 +15072,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 350.52 57.15 270)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15008,9 +15123,9 @@
 		(uuid "f4babd35-74d3-43b4-bfcf-3240acf8f395")
 		(property "Reference" "#PWR38"
 			(at 433.07 53.34 90)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15041,9 +15156,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 434.34 54.61 90)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15111,9 +15226,9 @@
 		)
 		(property "Footprint" "Library:SOT-223-4_L6.5-W3.5-P2.30-LS7.0-BR"
 			(at 46.99 68.58 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15122,9 +15237,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 46.99 68.58 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15143,9 +15258,9 @@
 		)
 		(property "LCSC Part" "C347222"
 			(at -82.55 35.56 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15193,9 +15308,9 @@
 		(uuid "fac0ae68-4992-48e8-aca4-ed3886d68081")
 		(property "Reference" "#PWR39"
 			(at 373.38 40.64 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15224,9 +15339,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 373.38 44.45 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15297,9 +15412,9 @@
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm"
 			(at 533.4 38.1 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15308,9 +15423,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 533.4 38.1 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15329,9 +15444,9 @@
 		)
 		(property "LCSC Part" "NONE"
 			(at 0 0 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15370,9 +15485,9 @@
 		(uuid "fd9b393b-5602-4cc6-be6a-c774a41a6a44")
 		(property "Reference" "#PWR35"
 			(at 406.4 53.34 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15401,9 +15516,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 406.4 57.15 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15433,6 +15548,330 @@
 			(project "circuit"
 				(path "/bd6174ae-c3ca-4473-b1e1-10eb8f19a183"
 					(reference "#PWR35")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 24.13 233.36 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "dea794d3-fbd1-41ae-9490-e3c28284746f")
+		(property "Reference" "FLG1"
+			(at 26.67 232.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 26.67 234.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 24.13 233.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "NONE"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project ""
+				(path "/bd24f865-33a5-4274-93fc-5c60ee6bd393"
+					(reference "FLG1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 39.13 233.36 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "685fd0f2-0fbe-466a-927b-8c2b0c3a61dd")
+		(property "Reference" "FLG2"
+			(at 41.67 232.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 41.67 234.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 39.13 233.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "NONE"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project ""
+				(path "/bd24f865-33a5-4274-93fc-5c60ee6bd393"
+					(reference "FLG2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 54.13 233.36 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8d8967dd-bfa2-4962-9c61-e6aa6608cab3")
+		(property "Reference" "FLG3"
+			(at 56.67 232.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 56.67 234.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 54.13 233.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "NONE"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project ""
+				(path "/bd24f865-33a5-4274-93fc-5c60ee6bd393"
+					(reference "FLG3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 69.13 233.36 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3e338e73-3f3f-4274-a8b3-ab60245c419b")
+		(property "Reference" "FLG4"
+			(at 71.67 232.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 71.67 234.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 69.13 233.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "NONE"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project ""
+				(path "/bd24f865-33a5-4274-93fc-5c60ee6bd393"
+					(reference "FLG4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 84.13 233.36 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fe594ffe-8a1e-49f8-9c18-419dd81a0d5b")
+		(property "Reference" "FLG5"
+			(at 86.67 232.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 86.67 234.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 84.13 233.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "NONE"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project ""
+				(path "/bd24f865-33a5-4274-93fc-5c60ee6bd393"
+					(reference "FLG5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 24.13 248.36 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f9e9f5a5-8a2f-4bb2-8a0f-d05f199a709c")
+		(property "Reference" "FLG6"
+			(at 26.67 247.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 26.67 249.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 24.13 248.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "NONE"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project ""
+				(path "/bd24f865-33a5-4274-93fc-5c60ee6bd393"
+					(reference "FLG6")
 					(unit 1)
 				)
 			)

@@ -7,7 +7,7 @@ from skidl import *
 @requirement("U1", "SN65HVD230 pin 2 GND must connect to GND and pin 3 VCC must connect to 3V3; these pins must not be swapped.")
 @requirement("Onboard 3.3V must be generated from selectable BAT12 or ACC12 through reverse-polarity P-channel MOSFET protection before the AMS1117-3.3 regulator.")
 @requirement("D2", "12V rail transient clamp must be a unidirectional SMBJ15A-class 15V TVS with cathode to VIN12 and anode to GND.")
-@requirement("D3", "Q1 gate-source voltage must be clamped by a 15V zener from source/cathode to gate/anode, with R1 less than 1kΩ to sink zener current during source transients.")
+@requirement("D3", "Q1 gate-source voltage must be clamped by a 15V zener from source/cathode to gate/anode, with R1 gate pull-down sized so continuous dissipation stays within its package rating at 14.4V while the zener self-limits transient VGS.")
 @requirement("JP3", "Pico-facing 3.3V header pins must be isolated from the onboard 3V3 rail by a normally-open jumper to prevent regulator backfeed by default.")
 @requirement("D4", "USB-C VBUS must have local 5V ESD protection to GND at the connector side of the EMI bead.")
 @requirement("FB1", "USB-C VBUS must pass through a ferrite bead before becoming the board 5V_USB rail.")
@@ -36,6 +36,30 @@ def build_circuit():
     can_rs = Net("CAN_RS")
 
     # TP1-TP40 are both the Metra 70-7903 pigtail solder pads and the probe pads.
+    # KiCad-side PWR_FLAG markers: these rails are legitimately driven by
+    # off-board sources (harness wires, USB-C VBUS) or through passive elements
+    # (Q1, FB1), so no schematic symbol has a power-output pin on them. PWR_FLAG
+    # satisfies KiCad ERC power_pin_not_driven without changing connectivity.
+    pwr_flag_rails = [
+        (1, gnd, "Ground enters via the Metra black harness wire (TP3) and USB-C shell/GND pins."),
+        (2, bat12, "Constant 12V enters via the Metra green harness wire on TP1."),
+        (3, acc12, "Switched 12V enters via the Metra gray harness wire on TP2."),
+        (4, vin12, "Protected 12V rail driven through Q1 reverse-polarity MOSFET (passive path)."),
+        (5, vbus, "5V enters from the USB-C connector J5 VBUS pins."),
+        (6, v5usb, "Filtered 5V rail driven through FB1 ferrite bead (passive path)."),
+    ]
+    for flag_num, flag_net, flag_reason in pwr_flag_rails:
+        pwr_flag = Part("power", "PWR_FLAG", ref="FLG" + str(flag_num))
+        pwr_flag.lcsc = "NONE"
+        pwr_flag.info = "KiCad ERC power flag; virtual symbol, no physical part. " + flag_reason
+        design_intent(
+            pwr_flag,
+            "KiCad ERC power flag; no physical part. " + flag_reason,
+            group="Power flags",
+            placement="Virtual symbol; place at the rail entry point on the schematic.",
+        )
+        flag_net += pwr_flag[1]
+
     # The supplied community documentation gives functions/wire colors, but not a verified
     # OEM cavity-number map. Keep the physical labels tied to the pigtail wire colors.
     harness_pads = [
@@ -137,12 +161,12 @@ def build_circuit():
     vin12 += q1[2]
     rp_gate += q1[1]
 
-    r1 = Part("Device", "R_Small", value="820Ω", ref="R1", footprint="Resistor_SMD:R_0603_1608Metric")
+    r1 = Part("Device", "R_Small", value="10kΩ", ref="R1", footprint="Resistor_SMD:R_0603_1608Metric")
     r1.lcsc = "NONE"
-    r1.info = "820Ω gate-to-ground resistor for Q1 reverse-polarity P-channel MOSFET. Low value sinks D3 zener current so Q1 VGS remains below the +/-20V absolute maximum during source transients."
+    r1.info = "10kΩ gate-to-ground resistor for Q1 reverse-polarity P-channel MOSFET. Dissipates ~21mW at 14.4V (safe for 0603); D3 15V zener self-limits and clamps VGS below the +/-20V absolute maximum during source transients."
     design_intent(
         r1,
-        "Gate-to-ground bias and D3 zener-current sink for Q1; turns the P-channel reverse-protection MOSFET on only when the selected 12V source has normal polarity.",
+        "Gate-to-ground bias for Q1 with D3 zener VGS clamp; turns the P-channel reverse-protection MOSFET on only when the selected 12V source has normal polarity. 10kΩ keeps continuous dissipation ~21mW at 14.4V within the 0603 rating.",
         group="12V input selection and protection",
         placement="Place adjacent to Q1 gate.",
     )
